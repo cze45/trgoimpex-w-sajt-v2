@@ -114,6 +114,74 @@ button.ft-btn{border:0;cursor:pointer;font-family:inherit}
 .ft-qr img{display:block;flex-shrink:0;width:104px;height:104px;border:1px solid #d8dde2;border-radius:8px;background:#fff}
 .ft-brand .ft-qr p{max-width:15ch;font-size:13px;line-height:1.5;font-weight:600;color:#556171}
 .ft-brand .ft-id{margin-top:14px;font-size:13px;line-height:1.6;font-weight:600;color:#556171}
+
+/* ===== RESPONSIVE: telefoni 360–430px i tableti ===== */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{overflow-x:hidden}
+img,video{max-width:100%}
+.mn-chk,.mn-btn{display:none}
+@media (max-width:900px){
+.hd{margin-bottom:-65px!important}
+header>div{flex-wrap:nowrap!important;min-height:64px!important;padding:0 16px!important;gap:12px!important}
+header>div>a:first-of-type{min-height:48px;gap:8px!important}
+header>div>a:first-of-type svg{width:46px;height:auto}
+header>div>a:first-of-type span{font-size:clamp(15px,4.4vw,19px)!important}
+.mn-btn{display:flex;position:relative;flex-shrink:0;width:48px;height:48px;align-items:center;justify-content:center;border-radius:50%;color:inherit;cursor:pointer}
+.mn-chk{display:block;position:absolute;right:16px;top:8px;width:48px;height:48px;margin:0;opacity:0;cursor:pointer;z-index:2}
+.mn-chk:focus-visible+.mn-btn{outline:2px solid currentColor;outline-offset:2px}
+.mn-btn .x,.mn-chk:checked+.mn-btn .b{display:none}
+.mn-chk:checked+.mn-btn .x{display:block}
+header .nav{display:none!important;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch!important;flex-wrap:nowrap!important;gap:0!important;padding:4px 16px 20px;background:#fefefe;color:#1b2e3c;border-bottom:1px solid #d8dde2;box-shadow:0 18px 30px rgba(27,46,60,.16);max-height:calc(100vh - 65px);max-height:calc(100svh - 65px);overflow-y:auto;overscroll-behavior:contain}
+.mn-chk:checked~.nav{display:flex!important}
+header .nav>a,header .nav .dd>a{min-height:56px;padding:0!important;font-size:1.0625rem;border-bottom:1px solid #eef0f2}
+header .nav .dd{display:block}
+header .ddm{display:block!important;position:static;opacity:1;visibility:visible;transform:none;min-width:0;padding:0}
+header .ddm>div{border:0;box-shadow:none;background:none;border-radius:0}
+header .nav .ddm a{min-height:48px;padding:0 0 0 20px!important;font-size:1rem;font-weight:500;color:#556171!important;border-bottom:1px solid #eef0f2!important;white-space:normal}
+header .nav .dd>a{width:100%}
+header .nav a.ft-btn{justify-content:space-between;margin-top:16px;min-height:56px;padding:4px 4px 4px 22px!important;border-bottom:0}
+header:has(.mn-chk:checked){background:#fefefe!important;color:#1b2e3c!important;animation:none!important;border-bottom-color:#d8dde2!important}
+header:has(.mn-chk:checked) .lw{fill:#6b0f1a!important;animation:none!important}
+.tl2,.crumbs a,.skip{min-height:48px}
+input,select,textarea{font-size:16px!important;min-height:48px}
+.hero{min-height:min(100svh,720px)!important}
+.hero-in{min-height:min(100svh,720px)!important;padding:104px 20px 48px!important}
+}
+@media (max-width:600px){
+.hm-clips .vp-btn{width:56px;height:56px;margin:-28px 0 0 -28px}
+main>section:not(.hero):not(.svh):not(.sv){padding-top:clamp(56px,16vw,80px)!important;padding-bottom:clamp(56px,16vw,80px)!important}
+.sv{padding:clamp(56px,16vw,72px) 0}
+.svh{padding:72px 0 56px}
+.svh h1{font-size:clamp(34px,9.6vw,56px)}
+.svh p,.sv .lede{font-size:1.0625rem}
+.sv h2{font-size:clamp(28px,8vw,40px)}
+.zz-t p{font-size:1.0625rem}
+.zz + .zz{margin-top:56px}
+.ab-img{aspect-ratio:4/3!important}
+[style*="aspect-ratio: 4/5"]{aspect-ratio:1/1!important}
+.crumbs{align-items:center;gap:0 8px}
+.crumbs li{display:flex;align-items:center;min-height:48px}
+.zz-v video{height:min(520px,70svh)}
+.deck{width:min(316px,100%);height:auto;aspect-ratio:316/480}
+.deck figure{left:12%;width:76%}
+.deck figure.nx{transform:translateX(18%) scale(.88)}
+.deck figure.pv{transform:translateX(-18%) scale(.88)}
+.rail img{height:min(240px,48vw)}
+.rail video{height:min(340px,72vw)}
+.steps li{padding:20px}
+.ft{padding:72px 16px 24px}
+.ft-word{font-size:clamp(40px,14vw,72px);margin-top:40px}
+.ft-list a{min-height:48px}
+.ft-contact li{align-items:center;padding:0}
+.ft-contact a,.ft-contact li>span{display:inline-flex;align-items:center;min-height:48px}
+.ft-bar{flex-direction:column;align-items:flex-start;padding:8px 20px}
+.ft-bar-links{flex-wrap:wrap;gap:0 24px}
+.ft-bar a{min-height:48px}
+.ft-btn.sm{min-height:48px}
+.hit,.sbtn,main a[href^="tel:"],main a[href^="mailto:"]{min-height:48px!important}
+main a[href^="tel:"],main a[href^="mailto:"]{display:inline-flex;align-items:center}
+.cw{padding:24px 20px!important}
+}
 </style>
 </head>
 <body>
@@ -130,6 +198,7 @@ button.ft-btn{border:0;cursor:pointer;font-family:inherit}
 <svg viewBox="0 0 198 112" width="64" height="41" fill="none" aria-hidden="true"><path d="M17 11H137L116 34H74V88L47 106V34H0L17 11Z" fill="#1B2E3C"></path><path d="M80 41H108L126 69L147 38L169 70L187 41H216L176 112H157L146 92L132 112H113L80 54Z" transform="translate(-18 -2)" fill="#6B0F1A"></path></svg>
 <span translate="no" style="font-weight: 800; font-size: 19px; line-height: 1; letter-spacing: -0.065em; white-space: nowrap">TRGOIMPEX&nbsp;W</span>
 </a>
+<input type="checkbox" id="mn" class="mn-chk" aria-label="Otvori ili zatvori meni"><label for="mn" class="mn-btn" aria-hidden="true"><svg class="b" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><svg class="x" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></label>
 <nav class="nav" aria-label="Glavna navigacija" style="display: flex; align-items: center; gap: 28px; font-size: 14px; font-weight: 500; flex-wrap: wrap">
 <div class="dd"><a class="lnk" href="index.html" style="padding: 12px 0"><span class="u">Početna</span><svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></a><div class="ddm"><div><a href="index.html#usluge">Delatnosti</a><a href="index.html#projekti">Odabrani projekti</a><a href="index.html#o-nama">O firmi</a><a href="index.html#kontakt">Kontakt</a></div></div></div>
 <a class="lnk" href="projekti.html" style="padding: 12px 0"><span class="u">Projekti</span></a>
