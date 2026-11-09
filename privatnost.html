@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Politika privatnosti – Trgoimpex W</title>
+<meta name="description" content="Kako Trgoimpex W iz Novog Sada prikuplja i koristi podatke sa sajta: kontakt forma, kolačići i Google Analytics, i vaša prava.">
+<meta name="theme-color" content="#fefefe">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration:none;touch-action:manipulation}
+h1,h2,h3{text-wrap:balance}
+p,li{text-wrap:pretty}
+[style*="max-width: 1240px"],[style*="max-width: 1288px"]{padding-left:max(24px,env(safe-area-inset-left))!important;padding-right:max(24px,env(safe-area-inset-right))!important}
+.nav a,.fl{display:inline-flex;align-items:center;min-height:44px;box-sizing:border-box}
+.hit,.dk,.tlink{position:relative}
+.hit::after,.dk::after,.tlink::after{content:"";position:absolute;inset:-12px -6px}
+@view-transition{navigation:auto}
+header{view-transition-name:site-header}
+::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation-duration:.25s}
+@media (prefers-reduced-motion:reduce){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none}}
+#sadrzaj{scroll-margin-top:96px}
+.nav .u{position:relative}
+.nav .u::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:2px;background:currentColor;transform:scaleX(0);transform-origin:left center;transition:transform .3s ease}
+.nav a:hover .u::after,.nav a:focus-visible .u::after,.nav a[aria-current="page"] .u::after{transform:scaleX(1)}
+@media (prefers-reduced-motion:reduce){.nav .u::after{transition:none}}
+
+.dd{position:relative;display:inline-flex}
+.dd>a .chev{margin-left:6px;transition:transform .25s ease}
+.dd:hover>a .chev,.dd:focus-within>a .chev{transform:rotate(180deg)}
+.ddm{position:absolute;top:100%;left:-16px;min-width:220px;padding-top:6px;opacity:0;transform:translateY(-6px);visibility:hidden;z-index:60;transition:opacity .2s ease .15s,transform .2s ease .15s,visibility 0s linear .35s}
+.dd:hover .ddm,.dd:focus-within .ddm{opacity:1;transform:none;visibility:visible;transition:opacity .2s ease,transform .2s ease,visibility 0s}
+.ddm>div{overflow:hidden;min-height:0;background:#fefefe;border:1px solid #d8dde2;border-radius:4px;box-shadow:0 12px 28px rgba(27,46,60,.14)}
+.nav .ddm a{display:flex;min-height:44px;padding:0 16px;border:0!important;color:#1b2e3c!important;font-weight:500;white-space:nowrap}
+.nav .ddm a:hover{background:#f3f4f5;color:#6b0f1a!important}
+.ddm a:focus-visible{outline-offset:-3px;outline-color:#6b0f1a!important}
+@media (hover:none){.ddm,.dd>a .chev{display:none}}
+@media (prefers-reduced-motion:reduce){.ddm,.dd:hover .ddm,.dd:focus-within .ddm,.dd>a .chev{transition:none}}
+
+.lnk{transition:color .15s,border-color .15s,background-color .15s}
+.nav a:hover{color:#6b0f1a;border-bottom-color:#6b0f1a}
+.btn:hover{background:#500b14}
+.card img{transition:transform .4s}
+.card:hover img{transform:scale(1.03)}
+.fl:hover{color:#fff}
+a:focus-visible,button:focus-visible{outline:3px solid #6b0f1a;outline-offset:3px}
+.dark a:focus-visible,.dark button:focus-visible{outline-color:#fff}
+.skip{position:absolute;left:16px;top:-80px;background:#6b0f1a;color:#fff;padding:12px 18px;border-radius:4px;font-weight:600;font-size:14px;z-index:5}
+.skip:focus{top:12px}
+@media (prefers-reduced-motion:reduce){.lnk,.card img{transition:none}.card:hover img{transform:none}}
+
+/* grid: 12 kolona, razmak 24px, kontejner 1240px, kolona 81,33px */
+.g12{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:24px}
+.vr{position:relative}
+.vr+.vr::before{content:"";position:absolute;left:-12px;top:0;bottom:0;width:1px;background:var(--vr,#d8dde2)}
+@media (max-width:900px){.g12{grid-template-columns:minmax(0,1fr);row-gap:40px}.g12>*{grid-column:1/-1!important;grid-row:auto!important}.g12 .ph{order:-1}.g3{grid-template-columns:repeat(2,minmax(0,1fr))}.g4{grid-template-columns:repeat(2,minmax(0,1fr))}.g4>.vr:nth-child(odd)::before{display:none}}
+@media (max-width:600px){.g3,.g4{grid-template-columns:minmax(0,1fr)}.vr::before{display:none}}
+/* podnožje: fotografija, poziv u sredini, ime iza bele kartice sa kolonama */
+.ft{position:relative;isolation:isolate;overflow:hidden;color:#fefefe;padding:120px 24px 48px;background:#1b2e3c}
+.ft-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.ft::before{content:"";position:absolute;inset:0;background:rgba(13,22,30,.66);z-index:-1}
+.ft-cta{max-width:640px;margin:0 auto;text-align:center}
+.ft-cta h2{margin:0 0 16px;font-size:clamp(34px,5vw,52px);line-height:1.1;font-weight:800;letter-spacing:-0.04em}
+.ft-cta p{margin:0 auto 32px;max-width:46ch;font-size:17px;line-height:1.6;color:#dfe5ec}
+.ft-btn{display:inline-flex;align-items:center;gap:14px;min-height:54px;padding:6px 6px 6px 26px;border-radius:999px;background:#6b0f1a;color:#fefefe;font-size:15px;font-weight:700;transition:background-color .2s ease}
+.ft-btn:hover{background:#500b14}
+.ft-arr{display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:#1b2e3c;transition:transform .2s ease}
+.ft-btn:hover .ft-arr{transform:rotate(45deg)}
+.ft-word{margin:56px 0 -0.42em;text-align:center;font-size:clamp(72px,17vw,250px);line-height:.8;font-weight:800;letter-spacing:-0.06em;color:rgba(254,254,254,.3);white-space:nowrap;pointer-events:none}
+.ft-card{position:relative;max-width:1240px;margin:0 auto;padding:48px 40px 24px;box-sizing:border-box;background:#fefefe;color:#1b2e3c;border-radius:20px}
+.ft-cols{display:grid;grid-template-columns:1.3fr 1.1fr .8fr 1.3fr;gap:40px;padding-bottom:40px}
+.ft-logo{display:flex;align-items:center;gap:10px;margin-bottom:18px;font-size:20px;font-weight:800;letter-spacing:-0.06em}
+.ft-brand p{margin:0;max-width:30ch;font-size:15px;line-height:1.7;color:#556171}
+.ft-card h3{margin:0 0 14px;font-size:18px;font-weight:800;letter-spacing:-0.02em}
+.ft-list,.ft-contact{margin:0;padding:0;list-style:none;display:grid;gap:2px}
+.ft-list a{position:relative;display:inline-flex;align-items:center;min-height:36px;padding-left:18px;font-size:15px;color:#3a4756;transition:color .15s ease}
+.ft-list a::before{content:"»";position:absolute;left:0;color:#6b0f1a;font-weight:700}
+.ft-list a:hover{color:#6b0f1a}
+.ft-contact li{display:flex;align-items:flex-start;gap:12px;padding:6px 0;font-size:15px;line-height:1.5;color:#3a4756}
+.ft-contact svg{flex-shrink:0;margin-top:1px}
+.ft-contact a{transition:color .15s ease}
+.ft-contact a:hover{color:#6b0f1a}
+.ft-bar{display:flex;justify-content:space-between;align-items:center;gap:12px 24px;flex-wrap:wrap;padding:12px 24px;border-radius:999px;background:#1b2e3c;color:#fefefe;font-size:13px}
+.ft-bar-links{display:flex;gap:24px}
+.ft-bar a{display:inline-flex;align-items:center;min-height:32px}
+.ft-bar a:hover{text-decoration:underline;text-underline-offset:4px}
+.ft-card a:focus-visible{outline-color:#6b0f1a}
+@media (max-width:900px){.ft-cols{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.ft{padding:88px 16px 24px}.ft-card{padding:32px 20px 20px}.ft-cols{grid-template-columns:minmax(0,1fr);gap:28px}.ft-bar{border-radius:16px}}
+@media (prefers-reduced-motion:reduce){.ft-btn,.ft-arr,.ft-list a{transition:none}.ft-btn:hover .ft-arr{transform:none}}
+
+/* jedan tip dugmeta i jedan tip linka na celom sajtu */
+.ft-btn{white-space:nowrap}
+.ft-btn.sm{min-height:44px;padding:4px 4px 4px 20px;gap:12px;font-size:14px}
+.ft-btn.sm .ft-arr{width:36px;height:36px}
+button.ft-btn{border:0;cursor:pointer;font-family:inherit}
+.nav a.ft-btn,.nav a.ft-btn:hover,.hd .nav a.ft-btn:hover{color:#fefefe!important;border-bottom:0}
+.tl2{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:15px;font-weight:700;color:#6b0f1a;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px;transition:color .15s ease}
+.tl2 svg{flex-shrink:0;transition:transform .2s ease}
+.tl2:hover{color:#500b14}
+.tl2:hover svg{transform:translate(3px,-3px)}
+.dark .tl2{color:#fefefe}
+.dark .tl2:hover{color:#c5ceda}
+@media (prefers-reduced-motion:reduce){.tl2,.tl2 svg{transition:none}.tl2:hover svg{transform:none}}
+.ft-qr{display:flex;align-items:center;gap:16px;margin-top:24px}
+.ft-qr img{display:block;flex-shrink:0;width:104px;height:104px;border:1px solid #d8dde2;border-radius:8px;background:#fff}
+.ft-brand .ft-qr p{max-width:15ch;font-size:13px;line-height:1.5;font-weight:600;color:#556171}
+.ft-brand .ft-id{margin-top:14px;font-size:13px;line-height:1.6;font-weight:600;color:#556171}
+
+/* ===== RESPONSIVE: telefoni 360–430px i tableti ===== */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{overflow-x:hidden}
+img,video{max-width:100%}
+.mn-chk,.mn-btn{display:none}
+@media (max-width:900px){
+.hd{margin-bottom:-65px!important}
+header>div{flex-wrap:nowrap!important;min-height:64px!important;padding:0 16px!important;gap:12px!important}
+header>div>a:first-of-type{min-height:48px;gap:8px!important}
+header>div>a:first-of-type svg{width:46px;height:auto}
+header>div>a:first-of-type span{font-size:clamp(15px,4.4vw,19px)!important}
+.mn-btn{display:flex;position:relative;flex-shrink:0;width:48px;height:48px;align-items:center;justify-content:center;border-radius:50%;color:inherit;cursor:pointer}
+.mn-chk{display:block;position:absolute;right:16px;top:8px;width:48px;height:48px;margin:0;opacity:0;cursor:pointer;z-index:2}
+.mn-chk:focus-visible+.mn-btn{outline:2px solid currentColor;outline-offset:2px}
+.mn-btn .x,.mn-chk:checked+.mn-btn .b{display:none}
+.mn-chk:checked+.mn-btn .x{display:block}
+header .nav{display:none!important;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch!important;flex-wrap:nowrap!important;gap:0!important;padding:4px 16px 20px;background:#fefefe;color:#1b2e3c;border-bottom:1px solid #d8dde2;box-shadow:0 18px 30px rgba(27,46,60,.16);max-height:calc(100vh - 65px);max-height:calc(100svh - 65px);overflow-y:auto;overscroll-behavior:contain}
+.mn-chk:checked~.nav{display:flex!important}
+header .nav>a,header .nav .dd>a{min-height:56px;padding:0!important;font-size:1.0625rem;border-bottom:1px solid #eef0f2}
+header .nav .dd{display:block}
+header .ddm{display:block!important;position:static;opacity:1;visibility:visible;transform:none;min-width:0;padding:0}
+header .ddm>div{border:0;box-shadow:none;background:none;border-radius:0}
+header .nav .ddm a{min-height:48px;padding:0 0 0 20px!important;font-size:1rem;font-weight:500;color:#556171!important;border-bottom:1px solid #eef0f2!important;white-space:normal}
+header .nav .dd>a{width:100%}
+header .nav a.ft-btn{justify-content:space-between;margin-top:16px;min-height:56px;padding:4px 4px 4px 22px!important;border-bottom:0}
+header:has(.mn-chk:checked){background:#fefefe!important;color:#1b2e3c!important;animation:none!important;border-bottom-color:#d8dde2!important}
+header:has(.mn-chk:checked) .lw{fill:#6b0f1a!important;animation:none!important}
+.tl2,.crumbs a,.skip{min-height:48px}
+input,select,textarea{font-size:16px!important;min-height:48px}
+.hero{min-height:min(100svh,720px)!important}
+.hero-in{min-height:min(100svh,720px)!important;padding:104px 20px 48px!important}
+}
+@media (max-width:600px){
+.hm-clips .vp-btn{width:56px;height:56px;margin:-28px 0 0 -28px}
+main>section:not(.hero):not(.svh):not(.sv){padding-top:clamp(56px,16vw,80px)!important;padding-bottom:clamp(56px,16vw,80px)!important}
+.sv{padding:clamp(56px,16vw,72px) 0}
+.svh{padding:72px 0 56px}
+.svh h1{font-size:clamp(34px,9.6vw,56px)}
+.svh p,.sv .lede{font-size:1.0625rem}
+.sv h2{font-size:clamp(28px,8vw,40px)}
+.zz-t p{font-size:1.0625rem}
+.zz + .zz{margin-top:56px}
+.ab-img{aspect-ratio:4/3!important}
+[style*="aspect-ratio: 4/5"]{aspect-ratio:1/1!important}
+.crumbs{align-items:center;gap:0 8px}
+.crumbs li{display:flex;align-items:center;min-height:48px}
+.zz-v video{height:min(520px,70svh)}
+.deck{width:min(316px,100%);height:auto;aspect-ratio:316/480}
+.deck figure{left:12%;width:76%}
+.deck figure.nx{transform:translateX(18%) scale(.88)}
+.deck figure.pv{transform:translateX(-18%) scale(.88)}
+.rail img{height:min(240px,48vw)}
+.rail video{height:min(340px,72vw)}
+.steps li{padding:20px}
+.ft{padding:72px 16px 24px}
+.ft-word{font-size:clamp(40px,14vw,72px);margin-top:40px}
+.ft-list a{min-height:48px}
+.ft-contact li{align-items:center;padding:0}
+.ft-contact a,.ft-contact li>span{display:inline-flex;align-items:center;min-height:48px}
+.ft-bar{flex-direction:column;align-items:flex-start;padding:8px 20px}
+.ft-bar-links{flex-wrap:wrap;gap:0 24px}
+.ft-bar a{min-height:48px}
+.ft-btn.sm{min-height:48px}
+.hit,.sbtn,main a[href^="tel:"],main a[href^="mailto:"]{min-height:48px!important}
+main a[href^="tel:"],main a[href^="mailto:"]{display:inline-flex;align-items:center}
+.cw{padding:24px 20px!important}
+}
+
+/* ===== JEDNO DUGME NA CELOM SAJTU (referenca: dugme u hero sekciji) ===== */
+.ft-btn,.ft-btn.sm{min-height:54px;padding:6px 6px 6px 26px;gap:14px;font-size:15px;font-weight:700;border-radius:999px;background:#6b0f1a;color:#fefefe}
+.ft-btn:hover{background:#500b14}
+.ft-arr,.ft-btn.sm .ft-arr{width:42px;height:42px;background:#510b14;color:#fefefe}
+.ft-arr svg{stroke:#fefefe}
+.ft-btn:hover .ft-arr{background:#3d070f}
+header .nav a.ft-btn{padding:6px 6px 6px 26px!important}
+.deck-btn{background:#6b0f1a;border-color:#6b0f1a;color:#fefefe}
+.deck-btn:hover{background:#500b14;border-color:#500b14}
+/* ===== HOVER DUGMADI = isti kao „Naši projekti“: strelica klizi gore-desno ===== */
+.ft-btn:hover .ft-arr{transform:none}
+.ft-arr svg{transition:transform .2s ease}
+.ft-btn:hover .ft-arr svg{transform:translate(3px,-3px)}
+@media (prefers-reduced-motion:reduce){.ft-arr svg{transition:none}.ft-btn:hover .ft-arr svg{transform:none}}
+/* ===== Podnožje na telefonu: ujednačen padding i razmak u donjoj traci ===== */
+@media (max-width:600px){
+.ft-bar{gap:0;padding:20px 20px 4px;border-radius:20px;font-size:13px;line-height:1.5}
+.ft-bar-links{gap:0 20px}
+}
+/* ===== Podnožje na telefonu: padajući meni za svaki naslov ===== */
+.ft-chk,.ft-chev{display:none}
+.ft-acc{cursor:default}
+@media (max-width:600px){
+.ft-cols{gap:0}
+.ft-brand{padding-bottom:28px}
+.ft-col{position:relative;border-top:1px solid #e3e7eb}
+.ft-col:last-child{border-bottom:1px solid #e3e7eb}
+.ft-cols{padding-bottom:24px}
+.ft-chk{display:block;position:absolute;left:0;top:0;width:100%;height:56px;margin:0;opacity:0;cursor:pointer;z-index:2}
+.ft-card .ft-col h3{margin:0}
+.ft-acc{display:flex;align-items:center;justify-content:space-between;min-height:56px;cursor:pointer}
+.ft-chev{display:block;flex-shrink:0;color:#6b0f1a;transition:transform .2s ease}
+.ft-chk:checked~h3 .ft-chev{transform:rotate(180deg)}
+.ft-chk:focus-visible~h3{outline:2px solid #6b0f1a;outline-offset:-2px;border-radius:4px}
+.ft-col .ft-list,.ft-col .ft-contact{display:none}
+.ft-chk:checked~.ft-list,.ft-chk:checked~.ft-contact{display:grid;padding-bottom:12px}
+}
+@media (prefers-reduced-motion:reduce){.ft-chev{transition:none}}
+/* ===== Telefon: svi naslovi sekcija iste veličine kao „Naše delatnosti“ ===== */
+@media (max-width:600px){
+h2[style*="clamp(30px, 5vw, 44px)"],.ab-txt h2,.sv h2,.ft-cta h2{font-size:clamp(38px,12vw,56px)!important;line-height:1.05!important}
+}
+/* ===== A11y pregled: tačke su dugmad, kontrast, dodir ===== */
+.dots{gap:0}
+.dots button{display:flex;align-items:center;justify-content:center;width:36px;height:48px;padding:0;border:0;background:none;cursor:pointer}
+.dots button::before{content:"";display:block;width:8px;height:8px;border-radius:4px;background:#77838c;transition:background-color .25s ease}
+.dots button.on::before{width:24px;background:#6b0f1a}
+.dots button:focus-visible{outline:2px solid #6b0f1a;outline-offset:-4px;border-radius:8px}
+.deck-hint{margin-top:4px!important}
+@media (prefers-reduced-motion:reduce){.dots button::before{transition:none}}
+button,label,.vp-btn,.ft-chk{touch-action:manipulation}
+a,button,label{-webkit-tap-highlight-color:rgba(107,15,26,.18)}
+/* NASLOV I PODNASLOV NA TELEFONU */
+@media (max-width:600px){
+.hero h1{font-size:clamp(52px,15.5vw,72px)!important;line-height:.98!important}
+.hero-in h1+p{font-size:15px!important;line-height:1.6!important;margin-top:22px!important}
+.svh h1{font-size:clamp(38px,11.2vw,56px)!important}
+h1[style*="clamp(40px, 7vw, 60px)"]{font-size:clamp(46px,13.5vw,64px)!important}
+.svh p,.sv .lede,h1[style*="clamp(40px, 7vw, 60px)"]+p{font-size:15px!important;line-height:1.6!important}
+}
+/* BROJKE 2x2 NA TELEFONU */
+@media (max-width:600px){
+dl.g4{grid-template-columns:repeat(2,minmax(0,1fr))!important;column-gap:24px}
+dl.g4>.vr{padding:28px 0!important}
+dl.g4>.vr:nth-child(even)::before{display:block}
+dl.g4>.vr:nth-child(n+3){border-top:1px solid #d8dde2}
+dl.g4 dd{font-size:clamp(32px,9.6vw,44px)!important}
+dl.g4 dt{font-size:14px!important;line-height:1.4}
+}
+/* POLITIKA PRIVATNOSTI I BANER ZA KOLAČIĆE */
+.pv-wrap{align-items:start}
+.pv-toc{position:sticky;top:112px}
+.pv-toc p{margin:0 0 12px;font-size:13px;font-weight:600;color:#6b0f1a}
+.pv-toc ol{list-style:none;margin:0;padding:0;border-left:2px solid #d8dde2}
+.pv-toc a{display:flex;align-items:center;min-height:44px;padding:0 0 0 16px;margin-left:-2px;border-left:2px solid transparent;font-size:15px;font-weight:500;color:#556171}
+.pv-toc a:hover{color:#6b0f1a;border-left-color:#6b0f1a}
+.pv-body{min-width:0}
+.pv-body>section{padding:0 0 48px;margin:0 0 48px;border-bottom:1px solid #d8dde2;scroll-margin-top:104px}
+.pv-body h2{display:flex;gap:14px;align-items:baseline;margin:0 0 20px;font-size:clamp(24px,3vw,30px);line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.pv-n{color:#6b0f1a;font-variant-numeric:tabular-nums}
+.pv-body h3{margin:32px 0 10px;font-size:18px;line-height:1.35;font-weight:700;letter-spacing:-0.02em}
+.pv-body p,.pv-body li{font-size:16px;line-height:1.75;color:#1b2e3c}
+.pv-body p{margin:0 0 16px;max-width:68ch}
+.pv-body ul{margin:0 0 20px;padding:0;list-style:none;display:grid;gap:12px;max-width:68ch}
+.pv-body li{position:relative;padding-left:24px}
+.pv-body li::before{content:"";position:absolute;left:0;top:.8em;width:10px;height:2px;background:#6b0f1a}
+.pv-body p a,.pv-body dd a{color:#6b0f1a;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.pv-body p a:hover,.pv-body dd a:hover{color:#500b14;text-decoration-thickness:2px}
+.pv-dl{display:grid;grid-template-columns:minmax(120px,190px) minmax(0,1fr);margin:0 0 20px;border-top:1px solid #d8dde2}
+.pv-dl dt,.pv-dl dd{margin:0;padding:14px 0;border-bottom:1px solid #d8dde2;font-size:16px;line-height:1.6}
+.pv-dl dt{font-size:14px;font-weight:600;color:#556171}
+.pv-tbl{margin:0 0 20px;overflow-x:auto}
+.pv-tbl table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.6}
+.pv-tbl th,.pv-tbl td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid #d8dde2}
+.pv-tbl thead th{background:#f3f4f5;font-size:13px;font-weight:600;color:#556171}
+.pv-tbl tbody th{font-weight:600}
+.pv-tbl code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;background:#f3f4f5;padding:2px 6px;border-radius:4px}
+.pv-tbl:focus-visible{outline:3px solid #6b0f1a;outline-offset:3px}
+.pv-note{margin-top:8px;padding:24px 28px;background:#f3f4f5;border-left:4px solid #6b0f1a;border-radius:4px}
+.pv-note p{margin:0;max-width:none}
+.pv-body>section:last-of-type{border-bottom:0;margin-bottom:24px;padding-bottom:0}
+.cc-open{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border:2px solid #6b0f1a;border-radius:999px;background:transparent;color:#6b0f1a;font-family:inherit;font-size:15px;font-weight:600;line-height:1;cursor:pointer;touch-action:manipulation;transition:background-color .15s,color .15s}
+.cc-open:hover{background:#6b0f1a;color:#fefefe}
+@media (max-width:900px){
+.pv-toc{position:static}
+.pv-toc p{margin-bottom:8px}
+.pv-body>section{padding-bottom:40px;margin-bottom:40px}
+}
+@media (max-width:600px){
+.pv-dl{grid-template-columns:minmax(0,1fr)}
+.pv-dl dt{padding:14px 0 0;border-bottom:0}
+.pv-dl dd{padding:2px 0 14px}
+.pv-tbl thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.pv-tbl table,.pv-tbl tbody,.pv-tbl tr,.pv-tbl th,.pv-tbl td{display:block}
+.pv-tbl tr{padding:14px 0;border-bottom:1px solid #d8dde2}
+.pv-tbl th,.pv-tbl td{padding:0;border:0}
+.pv-tbl tbody th{margin-bottom:6px}
+.pv-tbl td+td{margin-top:4px}
+.pv-tbl td::before{content:attr(data-l) ": ";font-size:13px;font-weight:600;color:#556171}
+}
+
+/* baner za kolačiće (donji) */
+#cc{position:fixed;left:0;right:0;bottom:0;z-index:100;display:flex;justify-content:center;padding:16px;pointer-events:none;box-sizing:border-box}
+#cc[hidden]{display:none}
+.cc-in{pointer-events:auto;box-sizing:border-box;width:100%;max-width:1240px;display:flex;align-items:center;justify-content:space-between;gap:20px 40px;padding:22px 28px;background:#1b2e3c;color:#fefefe;border-top:4px solid #6b0f1a;border-radius:4px;box-shadow:0 -10px 36px rgba(13,22,30,.38);animation:ccin .35s ease-out both}
+.cc-t{margin:0;max-width:760px;font-size:15px;line-height:1.6;color:#c5ceda}
+.cc-t strong{display:block;margin-bottom:4px;font-size:17px;font-weight:800;letter-spacing:-0.02em;color:#fefefe}
+.cc-t a{color:#fefefe;text-decoration:underline;text-underline-offset:3px}
+.cc-t a:hover{text-decoration-thickness:2px}
+.cc-b{display:flex;flex-shrink:0;gap:12px}
+.cc-btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border:2px solid #fefefe;border-radius:999px;background:transparent;color:#fefefe;font-family:inherit;font-size:15px;font-weight:700;line-height:1;white-space:nowrap;cursor:pointer;touch-action:manipulation;transition:background-color .15s,color .15s,border-color .15s}
+.cc-btn:hover{background:#fefefe;color:#1b2e3c}
+.cc-btn.cc-yes{background:#6b0f1a;border-color:#6b0f1a}
+.cc-btn.cc-yes:hover{background:#500b14;border-color:#fefefe;color:#fefefe}
+#cc a:focus-visible,#cc button:focus-visible{outline:3px solid #fefefe;outline-offset:3px}
+#cc.cc-static{position:static;padding:0}
+@keyframes ccin{from{transform:translateY(24px);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.cc-in{animation:none}.cc-btn,.cc-open{transition:none}}
+@media (max-width:760px){
+.cc-in{flex-direction:column;align-items:stretch;gap:18px;padding:20px}
+.cc-b{flex-direction:column}
+.cc-btn{width:100%}
+}
+@media (max-width:600px){
+#cc{padding:8px}
+.cc-t{font-size:14px}
+.cc-t strong{font-size:16px}
+}
+</style>
+</head>
+<body>
+<div style="font-family: 'Montserrat', system-ui, sans-serif; color: #1b2e3c; background: #fefefe; position: relative">
+
+<a href="#sadrzaj" class="skip">Preskoči na sadržaj</a>
+
+<!-- TRAKA SA KONTAKTOM -->
+
+
+<!-- HEADER -->
+<header style="position: sticky; top: 0; z-index: 50; background: #fefefe; border-bottom: 1px solid #d8dde2">
+<div style="max-width: 1288px; margin: 0 auto; padding: 0 24px; min-height: 84px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap">
+<a href="index.html" aria-label="Trgoimpex W – početna strana" style="display: inline-flex; align-items: center; gap: 11px">
+<svg viewBox="0 0 198 112" width="64" height="41" fill="none" aria-hidden="true"><path d="M17 11H137L116 34H74V88L47 106V34H0L17 11Z" fill="#1B2E3C"></path><path d="M80 41H108L126 69L147 38L169 70L187 41H216L176 112H157L146 92L132 112H113L80 54Z" transform="translate(-18 -2)" fill="#6B0F1A"></path></svg>
+<span translate="no" style="font-weight: 800; font-size: 19px; line-height: 1; letter-spacing: -0.065em; white-space: nowrap">TRGOIMPEX&nbsp;W</span>
+</a>
+<input type="checkbox" id="mn" class="mn-chk" aria-label="Otvori ili zatvori meni"><label for="mn" class="mn-btn" aria-hidden="true"><svg class="b" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><svg class="x" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></label>
+<nav class="nav" aria-label="Glavna navigacija" style="display: flex; align-items: center; gap: 28px; font-size: 14px; font-weight: 500; flex-wrap: wrap">
+<div class="dd"><a class="lnk" href="index.html" style="padding: 12px 0"><span class="u">Početna</span><svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></a><div class="ddm"><div><a href="index.html#usluge">Delatnosti</a><a href="index.html#projekti">Odabrani projekti</a><a href="index.html#o-nama">O firmi</a><a href="index.html#kontakt">Kontakt</a></div></div></div>
+<a class="lnk" href="projekti.html" style="padding: 12px 0"><span class="u">Projekti</span></a>
+<a class="lnk" href="o-nama.html" style="padding: 12px 0"><span class="u">O nama</span></a>
+<a class="lnk ft-btn sm" href="kontakt.html">Zatražite ponudu <span class="ft-arr" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></span></a>
+</nav>
+</div>
+</header>
+
+<main id="sadrzaj">
+
+<!-- NASLOV STRANICE -->
+<section style="padding: 88px 0 56px; background: #f3f4f5; border-bottom: 1px solid #d8dde2">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px">
+<h1 style="margin: 0 0 16px; font-size: clamp(40px, 7vw, 60px); line-height: 1.1; font-weight: 800; letter-spacing: -0.05em">Politika privatnosti</h1>
+<p style="margin: 0 0 12px; max-width: 640px; font-size: 18px; line-height: 1.7; color: #556171">Kako <span translate="no">Trgoimpex&nbsp;W</span> prikuplja, koristi i čuva vaše podatke o ličnosti, u skladu sa Zakonom o zaštiti podataka o ličnosti i Opštom uredbom EU o zaštiti podataka (GDPR).</p>
+<p style="margin: 0; font-size: 14px; color: #556171">Poslednje ažuriranje: 8. novembar 2026.</p>
+</div>
+</section>
+
+<!-- SADRŽAJ -->
+<section style="padding: 72px 0 104px; background: #fefefe">
+<div class="g12 pv-wrap" style="max-width: 1240px; margin: 0 auto; padding: 0 24px">
+
+<nav class="pv-toc" aria-label="Sadržaj politike privatnosti" style="grid-column: 1 / span 3">
+<p>Na ovoj stranici</p>
+<ol>
+<li><a class="lnk" href="#rukovalac">Ko obrađuje podatke</a></li>
+<li><a class="lnk" href="#podaci">Podaci koje prikupljamo</a></li>
+<li><a class="lnk" href="#osnov">Pravni osnov obrade</a></li>
+<li><a class="lnk" href="#deljenje">Deljenje podataka</a></li>
+<li><a class="lnk" href="#rokovi">Rokovi čuvanja</a></li>
+<li><a class="lnk" href="#prava">Vaša prava</a></li>
+<li><a class="lnk" href="#kolacici">Kolačići i web analitika</a></li>
+</ol>
+</nav>
+
+<div class="pv-body" style="grid-column: 5 / span 8">
+
+<section id="rukovalac" aria-labelledby="h-rukovalac">
+<h2 id="h-rukovalac"><span class="pv-n" aria-hidden="true">1.</span>Ko obrađuje vaše podatke</h2>
+<p>Ova politika važi za ovaj sajt i za podatke koje nam šaljete preko njega, telefonom ili e-poštom. Rukovalac, odnosno lice koje odlučuje zašto i kako se vaši podaci obrađuju, jeste:</p>
+<dl class="pv-dl">
+<dt>Naziv</dt><dd>[Naziv firme] (<span translate="no">Trgoimpex&nbsp;W</span>)</dd>
+<dt>Adresa</dt><dd>Titelska&nbsp;5, 21000 Novi&nbsp;Sad, Srbija</dd>
+<dt>Matični broj</dt><dd>08762767</dd>
+<dt>PIB</dt><dd>101876008</dd>
+<dt>E-pošta</dt><dd><a href="mailto:trgoimpexw@gmail.com">trgoimpexw@gmail.com</a></dd>
+<dt>Telefon</dt><dd><a href="tel:+38163504857">+381&nbsp;63&nbsp;504&nbsp;857</a></dd>
+</dl>
+<p>Za svako pitanje o vašim podacima i za ostvarivanje prava iz ove politike, javite nam se na navedenu e-adresu.</p>
+</section>
+
+<section id="podaci" aria-labelledby="h-podaci">
+<h2 id="h-podaci"><span class="pv-n" aria-hidden="true">2.</span>Podaci koje prikupljamo</h2>
+<h3>Kontakt forma i upiti za ponudu</h3>
+<p>Kada popunite formu „Pošaljite upit“, prikupljamo ime i prezime, broj telefona, vrstu radova koja vas zanima i tekst poruke. Iste podatke dobijamo kada nas pozovete ili pišete na e-poštu. Ne tražimo više podataka nego što je potrebno da vam odgovorimo.</p>
+<h3>Prijave za posao</h3>
+<p>Ako nam pošaljete prijavu za zapošljavanje, primamo podatke koje sami navedete: ime i prezime, kontakt, biografiju (CV), obrazovanje i radno iskustvo. Molimo vas da ne šaljete podatke koji nisu potrebni za prijavu, kao što su fotografije ličnih dokumenata ili podaci o zdravlju.</p>
+<h3>Tehnički podaci i kolačići</h3>
+<p>Kada posetite sajt, server automatski beleži tehničke podatke: IP adresu, vreme posete, tip uređaja i pregledača i otvorene stranice. Ako to dozvolite u baneru za kolačiće, Google Analytics dodatno prikuplja statistiku o korišćenju sajta. Detalje nalazite u odeljku&nbsp;7.</p>
+</section>
+
+<section id="osnov" aria-labelledby="h-osnov">
+<h2 id="h-osnov"><span class="pv-n" aria-hidden="true">3.</span>Pravni osnov obrade</h2>
+<ul>
+<li><strong>Pristanak.</strong> Analitički kolačići se uključuju samo ako kliknete „Prihvati sve“. Na isti način obrađujemo prijave za posao radi budućih konkursa. Pristanak možete povući u svakom trenutku.</li>
+<li><strong>Predugovorne i ugovorne radnje.</strong> Podatke iz upita koristimo da pripremimo ponudu i obilazak terena, a zatim da zaključimo i izvršimo ugovor o građevinskim radovima.</li>
+<li><strong>Zakonska obaveza.</strong> Podatke iz ugovora i računa čuvamo jer to nalažu računovodstveni i poreski propisi.</li>
+<li><strong>Opravdani interes.</strong> Tehničke zapise servera koristimo da zaštitimo sajt od zloupotreba i kvarova.</li>
+</ul>
+</section>
+
+<section id="deljenje" aria-labelledby="h-deljenje">
+<h2 id="h-deljenje"><span class="pv-n" aria-hidden="true">4.</span>Deljenje podataka</h2>
+<p>Vaše podatke ne prodajemo i ne delimo ih u marketinške svrhe. Dostupni su samo:</p>
+<ul>
+<li><strong>pružaocima IT usluga</strong> koji za nas obavljaju hosting sajta, održavanje i e-poštu, i to isključivo po našem nalogu i uz obavezu čuvanja poverljivosti;</li>
+<li><strong>kompaniji Google</strong>, ako ste prihvatili analitičke kolačiće;</li>
+<li><strong>državnim organima</strong>, kada nas na to obavezuje zakon ili odluka nadležnog organa.</li>
+</ul>
+<p>Neki od ovih pružalaca mogu obrađivati podatke van Srbije, uključujući Evropsku uniju i Sjedinjene Američke Države. U tom slučaju se oslanjamo na mere zaštite koje zakon predviđa, kao što su standardne ugovorne klauzule.</p>
+</section>
+
+<section id="rokovi" aria-labelledby="h-rokovi">
+<h2 id="h-rokovi"><span class="pv-n" aria-hidden="true">5.</span>Rokovi čuvanja</h2>
+<p>Podatke čuvamo onoliko dugo koliko je potrebno za svrhu zbog koje su prikupljeni.</p>
+<div class="pv-tbl" role="region" aria-label="Rokovi čuvanja podataka" tabindex="0">
+<table>
+<thead><tr><th scope="col">Vrsta podataka</th><th scope="col">Rok čuvanja</th></tr></thead>
+<tbody>
+<tr><th scope="row">Upiti i prepiska bez zaključenog posla</th><td data-l="Rok čuvanja">12 meseci od poslednje komunikacije</td></tr>
+<tr><th scope="row">Ugovori, ponude i računi</th><td data-l="Rok čuvanja">Rokovi koje propisuju računovodstveni i poreski propisi</td></tr>
+<tr><th scope="row">Prijave za posao</th><td data-l="Rok čuvanja">12 meseci od prijema, ili do povlačenja pristanka</td></tr>
+<tr><th scope="row">Tehnički zapisi servera</th><td data-l="Rok čuvanja">Do 6 meseci</td></tr>
+<tr><th scope="row">Podaci u Google Analytics-u</th><td data-l="Rok čuvanja">14 meseci</td></tr>
+</tbody>
+</table>
+</div>
+<p>Kada rok istekne, podatke brišemo ili trajno anonimizujemo.</p>
+</section>
+
+<section id="prava" aria-labelledby="h-prava">
+<h2 id="h-prava"><span class="pv-n" aria-hidden="true">6.</span>Vaša prava</h2>
+<p>U vezi sa vašim podacima imate pravo da:</p>
+<ul>
+<li><strong>pristupite podacima</strong> i dobijete kopiju onoga što o vama čuvamo;</li>
+<li><strong>ispravite</strong> netačne ili dopunite nepotpune podatke;</li>
+<li><strong>zatražite brisanje</strong> podataka, kada više nisu potrebni ili je obrada nezakonita;</li>
+<li><strong>ograničite obradu</strong> ili uložite prigovor na nju;</li>
+<li><strong>prenesete podatke</strong> drugom rukovaocu, kada je obrada zasnovana na pristanku ili ugovoru;</li>
+<li><strong>povučete pristanak</strong> u svakom trenutku. Povlačenje ne utiče na zakonitost obrade pre povlačenja.</li>
+</ul>
+<p>Zahtev pošaljite na <a href="mailto:trgoimpexw@gmail.com">trgoimpexw@gmail.com</a>. Odgovaramo bez nepotrebnog odlaganja, a najkasnije u roku od 30&nbsp;dana. Možda ćemo tražiti da potvrdite identitet pre nego što postupimo po zahtevu.</p>
+<p>Ako smatrate da obrađujemo podatke protivno zakonu, imate pravo da podnesete pritužbu Povereniku za informacije od javnog značaja i zaštitu podataka o ličnosti (<a href="https://www.poverenik.rs" rel="noopener" target="_blank">poverenik.rs</a>). Ako boravite u Evropskoj uniji, možete se obratiti i nadzornom organu svoje države.</p>
+</section>
+
+<section id="kolacici" aria-labelledby="h-kolacici">
+<h2 id="h-kolacici"><span class="pv-n" aria-hidden="true">7.</span>Kolačići i web analitika</h2>
+<p>Kolačići su male tekstualne datoteke koje sajt čuva u vašem pregledaču. Ovaj sajt ne koristi kolačiće za oglašavanje. Jedini kolačići koje postavljamo služe za statistiku poseta, i to samo ako ih prihvatite.</p>
+<h3>Google Analytics 4</h3>
+<p>Za praćenje poseta koristimo Google Analytics 4, uslugu kompanije Google. Pokazuje nam, na primer, koliko ljudi posećuje sajt, koje stranice čitaju i sa kog tipa uređaja dolaze. Podatke koristimo isključivo za statistiku i poboljšanje sajta.</p>
+<ul>
+<li>Google Analytics se <strong>ne učitava dok ne kliknete „Prihvati sve“</strong>. Do tada se ne postavlja nijedan analitički kolačić i ne šalju se podaci kompaniji Google.</li>
+<li>Google Analytics 4 ne beleži niti čuva pojedinačne IP adrese.</li>
+<li>Ako kliknete „Odbij analitičke“, sajt radi isto, a vaše posete se ne prate.</li>
+</ul>
+<div class="pv-tbl" role="region" aria-label="Spisak kolačića i lokalnih podataka" tabindex="0">
+<table>
+<thead><tr><th scope="col">Naziv</th><th scope="col">Svrha</th><th scope="col">Trajanje</th></tr></thead>
+<tbody>
+<tr><th scope="row"><code>_ga</code></th><td data-l="Svrha">Razlikuje posetioce (analitički)</td><td data-l="Trajanje">2 godine</td></tr>
+<tr><th scope="row"><code>_ga_*</code></th><td data-l="Svrha">Čuva stanje sesije u Google Analytics-u (analitički)</td><td data-l="Trajanje">2 godine</td></tr>
+<tr><th scope="row"><code>cookie-consent</code></th><td data-l="Svrha">Pamti vaš izbor iz banera, čuva se samo u vašem pregledaču (neophodno)</td><td data-l="Trajanje">Dok ga ne obrišete</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Kako da promenite ili povučete izbor</h3>
+<p>Izbor možete promeniti u svakom trenutku. Povlačenje pristanka briše analitičke kolačiće i zaustavlja dalje praćenje.</p>
+<p><button type="button" class="cc-open" data-cc-open>Promeni izbor kolačića</button></p>
+<p>Praćenje možete isključiti i za sve sajtove koji koriste Google Analytics, instalacijom <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener" target="_blank">Google dodatka za odbijanje analitike</a> u pregledaču. Kolačiće možete obrisati ili blokirati i u podešavanjima pregledača. Više o tome kako Google obrađuje podatke nalazi se u <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Googleovoj politici privatnosti</a>.</p>
+</section>
+
+<div class="pv-note">
+<p><strong>Imate pitanje o svojim podacima?</strong> Pišite nam na <a href="mailto:trgoimpexw@gmail.com">trgoimpexw@gmail.com</a> ili nas pozovite na <a href="tel:+38163504857">+381&nbsp;63&nbsp;504&nbsp;857</a>. Ovu politiku ažuriramo kada se promeni način na koji obrađujemo podatke, a datum izmene je naveden na vrhu stranice.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="ft dark">
+<img class="ft-bg" src="images/hala-konstrukcija.webp" alt="" width="1600" height="1200" loading="lazy">
+<div class="ft-cta">
+<h2>Planirate radove?</h2>
+<p>Recite nam gde i šta planirate. Odgovaramo na upite u roku od 24&nbsp;sata radnim danom.</p>
+<a class="lnk ft-btn" href="kontakt.html">Zatražite ponudu <span class="ft-arr" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></span></a>
+</div>
+<p class="ft-word" aria-hidden="true" translate="no">TRGOIMPEX</p>
+<div class="ft-card">
+<div class="ft-cols">
+<div class="ft-brand">
+<div class="ft-logo"><svg viewBox="0 0 198 112" width="56" height="32" fill="none" aria-hidden="true"><path d="M17 11H137L116 34H74V88L47 106V34H0L17 11Z" fill="#1B2E3C"></path><path d="M80 41H108L126 69L147 38L169 70L187 41H216L176 112H157L146 92L132 112H113L80 54Z" transform="translate(-18 -2)" fill="#6B0F1A"></path></svg><span translate="no">TRGOIMPEX&nbsp;W</span></div>
+<p>Porodična građevinska firma iz Novog Sada. Više od 25 godina na terenu, sa svojim ljudima i mehanizacijom.</p>
+<p class="ft-id">PIB:&nbsp;101876008<br>MB:&nbsp;08762767</p>
+<div class="ft-qr"><img src="images/qr-recenzije.png" alt="QR kod koji vodi na recenzije o firmi Trgoimpex W" width="132" height="132" loading="lazy"><p>Skenirajte kod i ostavite recenziju o nama</p></div>
+</div>
+<div class="ft-col">
+<input type="checkbox" class="ft-chk" id="fc1" aria-label="Delatnosti" role="button" aria-expanded="false" onchange="this.setAttribute('aria-expanded',this.checked)" onkeydown="if(event.key==='Enter'){this.click()}">
+<h3><label for="fc1" class="ft-acc">Delatnosti<svg class="ft-chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></label></h3>
+<ul class="ft-list"><li><a class="lnk" href="ogradjivanje.html">Ograđivanje</a></li><li><a class="lnk" href="asfaltiranje.html">Asfaltiranje</a></li><li><a class="lnk" href="iskopi.html">Iskopi i zemljani radovi</a></li><li><a class="lnk" href="niskogradnja.html">Niskogradnja</a></li><li><a class="lnk" href="visokogradnja.html">Visokogradnja</a></li></ul>
+</div>
+<div class="ft-col">
+<input type="checkbox" class="ft-chk" id="fc2" aria-label="Stranice" role="button" aria-expanded="false" onchange="this.setAttribute('aria-expanded',this.checked)" onkeydown="if(event.key==='Enter'){this.click()}">
+<h3><label for="fc2" class="ft-acc">Stranice<svg class="ft-chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></label></h3>
+<ul class="ft-list"><li><a class="lnk" href="index.html">Početna</a></li><li><a class="lnk" href="projekti.html">Projekti</a></li><li><a class="lnk" href="o-nama.html">O nama</a></li><li><a class="lnk" href="kontakt.html">Kontakt</a></li></ul>
+</div>
+<div class="ft-col">
+<input type="checkbox" class="ft-chk" id="fc3" aria-label="Kontakt" role="button" aria-expanded="false" onchange="this.setAttribute('aria-expanded',this.checked)" onkeydown="if(event.key==='Enter'){this.click()}">
+<h3><label for="fc3" class="ft-acc">Kontakt<svg class="ft-chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></label></h3>
+<ul class="ft-contact">
+<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6b0f1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg><span>Titelska&nbsp;5<br>21000 Novi&nbsp;Sad, Srbija</span></li>
+<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6b0f1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"></path></svg><a class="lnk" href="tel:+38163504857">+381&nbsp;63&nbsp;504&nbsp;857</a></li>
+<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6b0f1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"></rect><path d="M3 7l9 7 9-7"></path></svg><a class="lnk" href="mailto:trgoimpexw@gmail.com">trgoimpexw@gmail.com</a></li>
+<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6b0f1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span>Pon–sub: 08:00–16:00</span></li>
+</ul>
+</div>
+</div>
+<div class="ft-bar">
+<span>© 2026 <span translate="no">Trgoimpex&nbsp;W</span>. Sva prava zadržana.</span>
+<span class="ft-bar-links"><a class="lnk" href="privatnost.html">Politika privatnosti</a><a class="lnk" href="#sadrzaj">Nazad na vrh ↑</a></span>
+</div>
+</div>
+</footer>
+
+<div id="cc" role="region" aria-label="Obaveštenje o kolačićima" hidden>
+<div class="cc-in">
+<p class="cc-t"><strong>Vaša privatnost</strong>Koristimo analitičke kolačiće (Google Analytics) da bismo videli kako se sajt koristi. Uključuju se tek uz vaš pristanak. Više u <a href="privatnost.html">Politici privatnosti</a>.</p>
+<div class="cc-b"><button type="button" class="cc-btn cc-no" data-cc="denied">Odbij analitičke</button><button type="button" class="cc-btn cc-yes" data-cc="accepted">Prihvati sve</button></div>
+</div>
+</div>
+</div>
+<script src="cookie-consent.js" defer></script>
+</body>
+</html>
