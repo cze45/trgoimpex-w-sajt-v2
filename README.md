@@ -6,6 +6,9 @@ Statičan sajt porodične građevinske firme Trgoimpex W iz Novog Sada. Bez buil
 
 - `index.html` – početna
 - `projekti.html`, `o-nama.html`, `kontakt.html`
+- `privatnost.html` – politika privatnosti, `404.html` – stranica za nepostojeće adrese (GitHub Pages je koristi automatski)
+- `cookie-consent.js` – baner za kolačiće; Google Analytics (GA4) se učitava tek posle pristanka
+- `anketa.js` – anketa u koracima na strani Kontakt (koraci rade i bez skripte; skripta dodaje fokus, tastaturu i slanje)
 - `ogradjivanje.html`, `asfaltiranje.html`, `iskopi.html`, `niskogradnja.html`, `visokogradnja.html` – po jedna strana za svaku delatnost
 - `images/` – fotografije (webp), `video/` – kratki snimci radova (do 7 sekundi)
 
@@ -19,6 +22,8 @@ Prva verzija sajta (pre novih slika, snimaka i strana delatnosti) je u privatnom
 
 ## Otvoreno pre objave na pravom domenu
 
-- Forme rade preko `mailto:`; treba ih povezati sa Formspree ili Cloudflare Workerom.
-- Instagram, Facebook i „Politika privatnosti“ vode na `#`.
-- Tekstove opisa delatnosti i brojke proveriti sa klijentom.
+- Anketa na strani Kontakt šalje preko `mailto:` (`anketa.js`); treba je povezati sa Formspree ili Cloudflare Workerom.
+- `niskogradnja.html` više nije na dizajn kanvasu i nije povezana ni sa jedne strane; odlučiti da li se briše.
+- U `cookie-consent.js` zameniti `GA_ID` (`G-XXXXXXXXXX`) pravim Measurement ID-jem.
+- Linkove ka Instagramu i Facebooku dodati kad klijent pošalje naloge (trenutno ih nema na sajtu).
+- Tekstove opisa delatnosti, brojke i podatke u politici privatnosti proveriti sa klijentom.
