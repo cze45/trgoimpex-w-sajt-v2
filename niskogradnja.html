@@ -6,6 +6,16 @@
 <title>Niskogradnja – Trgoimpex W</title>
 <meta name="description" content="Gradimo puteve, mostove i ostalu saobraćajnu infrastrukturu. Izvodimo pripremu terena, donji i gornji stroj, odvodnjavanje, behaton staze i završne radove, prema projektu i u dogovorenom roku.">
 <meta name="theme-color" content="#fefefe">
+<link rel="canonical" href="https://cze45.github.io/trgoimpex-w-sajt-v2/niskogradnja.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sr_RS">
+<meta property="og:site_name" content="Trgoimpex W">
+<meta property="og:title" content="Niskogradnja – Trgoimpex W">
+<meta property="og:description" content="Gradimo puteve, mostove i ostalu saobraćajnu infrastrukturu. Izvodimo pripremu terena, donji i gornji stroj, odvodnjavanje, behaton staze i završne radove, prema projektu i u dogovorenom roku.">
+<meta property="og:url" content="https://cze45.github.io/trgoimpex-w-sajt-v2/niskogradnja.html">
+<meta property="og:image" content="https://cze45.github.io/trgoimpex-w-sajt-v2/images/naslovna.webp">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&amp;display=swap" rel="stylesheet">
@@ -296,6 +306,183 @@ main>section:not(.hero):not(.svh):not(.sv){padding-top:clamp(56px,16vw,80px)!imp
 main a[href^="tel:"],main a[href^="mailto:"]{display:inline-flex;align-items:center}
 .cw{padding:24px 20px!important}
 }
+
+/* ===== JEDNO DUGME NA CELOM SAJTU (referenca: dugme u hero sekciji) ===== */
+.ft-btn,.ft-btn.sm{min-height:54px;padding:6px 6px 6px 26px;gap:14px;font-size:15px;font-weight:700;border-radius:999px;background:#6b0f1a;color:#fefefe}
+.ft-btn:hover{background:#500b14}
+.ft-arr,.ft-btn.sm .ft-arr{width:42px;height:42px;background:#510b14;color:#fefefe}
+.ft-arr svg{stroke:#fefefe}
+.ft-btn:hover .ft-arr{background:#3d070f}
+header .nav a.ft-btn{padding:6px 6px 6px 26px!important}
+.deck-btn{background:#6b0f1a;border-color:#6b0f1a;color:#fefefe}
+.deck-btn:hover{background:#500b14;border-color:#500b14}
+/* ===== HOVER DUGMADI = isti kao „Naši projekti“: strelica klizi gore-desno ===== */
+.ft-btn:hover .ft-arr{transform:none}
+.ft-arr svg{transition:transform .2s ease}
+.ft-btn:hover .ft-arr svg{transform:translate(3px,-3px)}
+@media (prefers-reduced-motion:reduce){.ft-arr svg{transition:none}.ft-btn:hover .ft-arr svg{transform:none}}
+/* vp video */
+.vp video{cursor:pointer}.vp video:focus-visible{outline:3px solid #6b0f1a;outline-offset:3px}
+/* ===== Karuseli: prevlačenje prstom, na telefonu bez strelica ===== */
+.deck,.hm-clips{-webkit-user-select:none;user-select:none}
+.dh-m,.deck-hint{display:none}
+@media (max-width:900px){
+.deck{touch-action:pan-y}
+.hm-clips{display:block;position:relative;width:316px;height:440px;margin:0 auto;touch-action:pan-y}
+.hm-clips figure{position:absolute;top:0;left:38px;width:240px;opacity:0;visibility:hidden;transform:scale(.8);pointer-events:none;transition:transform .45s cubic-bezier(.2,.7,.2,1),opacity .45s ease,visibility 0s .45s}
+.hm-clips figure.on{z-index:3;opacity:1;visibility:visible;transform:none;pointer-events:auto;transition-delay:0s}
+.hm-clips figure.nx{z-index:2;opacity:.55;visibility:visible;transform:translateX(48px) scale(.88);transition-delay:0s}
+.hm-clips figure.pv{z-index:1;opacity:.55;visibility:visible;transform:translateX(-48px) scale(.88);transition-delay:0s}
+.deck-hint{display:block;margin:20px 0 0;text-align:center;font-size:14px;font-weight:600;color:#556171}
+}
+@media (max-width:600px){
+.hm-clips{width:min(316px,100%);height:auto;aspect-ratio:316/440}
+.hm-clips figure{left:12%;width:76%}
+.hm-clips figure.nx{transform:translateX(18%) scale(.88)}
+.hm-clips figure.pv{transform:translateX(-18%) scale(.88)}
+.deck-btn{display:none}
+.dh-d{display:none}
+.dh-m{display:inline}
+}
+@media (prefers-reduced-motion:reduce){.hm-clips figure{transition:none}}
+/* ===== Tačke ispod karusela: na kom smo snimku ===== */
+.dots{display:flex;align-items:center;justify-content:center;gap:8px}
+@media (max-width:900px){.deck-hint{display:flex}}
+@media (max-width:600px){.dh-m{display:flex}}
+/* ===== Podnožje na telefonu: ujednačen padding i razmak u donjoj traci ===== */
+@media (max-width:600px){
+.ft-bar{gap:0;padding:20px 20px 4px;border-radius:20px;font-size:13px;line-height:1.5}
+.ft-bar-links{gap:0 20px}
+}
+/* ===== Podnožje na telefonu: padajući meni za svaki naslov ===== */
+.ft-chk,.ft-chev{display:none}
+.ft-acc{cursor:default}
+@media (max-width:600px){
+.ft-cols{gap:0}
+.ft-brand{padding-bottom:28px}
+.ft-col{position:relative;border-top:1px solid #e3e7eb}
+.ft-col:last-child{border-bottom:1px solid #e3e7eb}
+.ft-cols{padding-bottom:24px}
+.ft-chk{display:block;position:absolute;left:0;top:0;width:100%;height:56px;margin:0;opacity:0;cursor:pointer;z-index:2}
+.ft-card .ft-col h3{margin:0}
+.ft-acc{display:flex;align-items:center;justify-content:space-between;min-height:56px;cursor:pointer}
+.ft-chev{display:block;flex-shrink:0;color:#6b0f1a;transition:transform .2s ease}
+.ft-chk:checked~h3 .ft-chev{transform:rotate(180deg)}
+.ft-chk:focus-visible~h3{outline:2px solid #6b0f1a;outline-offset:-2px;border-radius:4px}
+.ft-col .ft-list,.ft-col .ft-contact{display:none}
+.ft-chk:checked~.ft-list,.ft-chk:checked~.ft-contact{display:grid;padding-bottom:12px}
+}
+@media (prefers-reduced-motion:reduce){.ft-chev{transition:none}}
+/* ===== Telefon: svi naslovi sekcija iste veličine kao „Naše delatnosti“ ===== */
+@media (max-width:600px){
+h2[style*="clamp(30px, 5vw, 44px)"],.ab-txt h2,.sv h2,.ft-cta h2{font-size:clamp(38px,12vw,56px)!important;line-height:1.05!important}
+}
+/* ===== A11y pregled: tačke su dugmad, kontrast, dodir ===== */
+.dots{gap:0}
+.dots button{display:flex;align-items:center;justify-content:center;width:36px;height:48px;padding:0;border:0;background:none;cursor:pointer}
+.dots button::before{content:"";display:block;width:8px;height:8px;border-radius:4px;background:#77838c;transition:background-color .25s ease}
+.dots button.on::before{width:24px;background:#6b0f1a}
+.dots button:focus-visible{outline:2px solid #6b0f1a;outline-offset:-4px;border-radius:8px}
+.deck-hint{margin-top:4px!important}
+@media (prefers-reduced-motion:reduce){.dots button::before{transition:none}}
+button,label,.vp-btn,.ft-chk{touch-action:manipulation}
+a,button,label{-webkit-tap-highlight-color:rgba(107,15,26,.18)}
+/* NASLOV I PODNASLOV NA TELEFONU */
+@media (max-width:600px){
+.hero h1{font-size:clamp(52px,15.5vw,72px)!important;line-height:.98!important}
+.hero-in h1+p{font-size:15px!important;line-height:1.6!important;margin-top:22px!important}
+.svh h1{font-size:clamp(38px,11.2vw,56px)!important}
+h1[style*="clamp(40px, 7vw, 60px)"]{font-size:clamp(46px,13.5vw,64px)!important}
+.svh p,.sv .lede,h1[style*="clamp(40px, 7vw, 60px)"]+p{font-size:15px!important;line-height:1.6!important}
+}
+/* BROJKE 2x2 NA TELEFONU */
+@media (max-width:600px){
+dl.g4{grid-template-columns:repeat(2,minmax(0,1fr))!important;column-gap:24px}
+dl.g4>.vr{padding:28px 0!important}
+dl.g4>.vr:nth-child(even)::before{display:block}
+dl.g4>.vr:nth-child(n+3){border-top:1px solid #d8dde2}
+dl.g4 dd{font-size:clamp(32px,9.6vw,44px)!important}
+dl.g4 dt{font-size:14px!important;line-height:1.4}
+}
+/* POLITIKA PRIVATNOSTI I BANER ZA KOLAČIĆE */
+.pv-wrap{align-items:start}
+.pv-toc{position:sticky;top:112px}
+.pv-toc p{margin:0 0 12px;font-size:13px;font-weight:600;color:#6b0f1a}
+.pv-toc ol{list-style:none;margin:0;padding:0;border-left:2px solid #d8dde2}
+.pv-toc a{display:flex;align-items:center;min-height:44px;padding:0 0 0 16px;margin-left:-2px;border-left:2px solid transparent;font-size:15px;font-weight:500;color:#556171}
+.pv-toc a:hover{color:#6b0f1a;border-left-color:#6b0f1a}
+.pv-body{min-width:0}
+.pv-body>section{padding:0 0 48px;margin:0 0 48px;border-bottom:1px solid #d8dde2;scroll-margin-top:104px}
+.pv-body h2{display:flex;gap:14px;align-items:baseline;margin:0 0 20px;font-size:clamp(24px,3vw,30px);line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.pv-n{color:#6b0f1a;font-variant-numeric:tabular-nums}
+.pv-body h3{margin:32px 0 10px;font-size:18px;line-height:1.35;font-weight:700;letter-spacing:-0.02em}
+.pv-body p,.pv-body li{font-size:16px;line-height:1.75;color:#1b2e3c}
+.pv-body p{margin:0 0 16px;max-width:68ch}
+.pv-body ul{margin:0 0 20px;padding:0;list-style:none;display:grid;gap:12px;max-width:68ch}
+.pv-body li{position:relative;padding-left:24px}
+.pv-body li::before{content:"";position:absolute;left:0;top:.8em;width:10px;height:2px;background:#6b0f1a}
+.pv-body p a,.pv-body dd a{color:#6b0f1a;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.pv-body p a:hover,.pv-body dd a:hover{color:#500b14;text-decoration-thickness:2px}
+.pv-dl{display:grid;grid-template-columns:minmax(120px,190px) minmax(0,1fr);margin:0 0 20px;border-top:1px solid #d8dde2}
+.pv-dl dt,.pv-dl dd{margin:0;padding:14px 0;border-bottom:1px solid #d8dde2;font-size:16px;line-height:1.6}
+.pv-dl dt{font-size:14px;font-weight:600;color:#556171}
+.pv-tbl{margin:0 0 20px;overflow-x:auto}
+.pv-tbl table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.6}
+.pv-tbl th,.pv-tbl td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid #d8dde2}
+.pv-tbl thead th{background:#f3f4f5;font-size:13px;font-weight:600;color:#556171}
+.pv-tbl tbody th{font-weight:600}
+.pv-tbl code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;background:#f3f4f5;padding:2px 6px;border-radius:4px}
+.pv-tbl:focus-visible{outline:3px solid #6b0f1a;outline-offset:3px}
+.pv-note{margin-top:8px;padding:24px 28px;background:#f3f4f5;border-left:4px solid #6b0f1a;border-radius:4px}
+.pv-note p{margin:0;max-width:none}
+.pv-body>section:last-of-type{border-bottom:0;margin-bottom:24px;padding-bottom:0}
+.cc-open{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border:2px solid #6b0f1a;border-radius:999px;background:transparent;color:#6b0f1a;font-family:inherit;font-size:15px;font-weight:600;line-height:1;cursor:pointer;touch-action:manipulation;transition:background-color .15s,color .15s}
+.cc-open:hover{background:#6b0f1a;color:#fefefe}
+@media (max-width:900px){
+.pv-toc{position:static}
+.pv-toc p{margin-bottom:8px}
+.pv-body>section{padding-bottom:40px;margin-bottom:40px}
+}
+@media (max-width:600px){
+.pv-dl{grid-template-columns:minmax(0,1fr)}
+.pv-dl dt{padding:14px 0 0;border-bottom:0}
+.pv-dl dd{padding:2px 0 14px}
+.pv-tbl thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.pv-tbl table,.pv-tbl tbody,.pv-tbl tr,.pv-tbl th,.pv-tbl td{display:block}
+.pv-tbl tr{padding:14px 0;border-bottom:1px solid #d8dde2}
+.pv-tbl th,.pv-tbl td{padding:0;border:0}
+.pv-tbl tbody th{margin-bottom:6px}
+.pv-tbl td+td{margin-top:4px}
+.pv-tbl td::before{content:attr(data-l) ": ";font-size:13px;font-weight:600;color:#556171}
+}
+
+/* baner za kolačiće (donji) */
+#cc{position:fixed;left:0;right:0;bottom:0;z-index:100;display:flex;justify-content:center;padding:16px;pointer-events:none;box-sizing:border-box}
+#cc[hidden]{display:none}
+.cc-in{pointer-events:auto;box-sizing:border-box;width:100%;max-width:1240px;display:flex;align-items:center;justify-content:space-between;gap:20px 40px;padding:22px 28px;background:#1b2e3c;color:#fefefe;border-top:4px solid #6b0f1a;border-radius:4px;box-shadow:0 -10px 36px rgba(13,22,30,.38);animation:ccin .35s ease-out both}
+.cc-t{margin:0;max-width:760px;font-size:15px;line-height:1.6;color:#c5ceda}
+.cc-t strong{display:block;margin-bottom:4px;font-size:17px;font-weight:800;letter-spacing:-0.02em;color:#fefefe}
+.cc-t a{color:#fefefe;text-decoration:underline;text-underline-offset:3px}
+.cc-t a:hover{text-decoration-thickness:2px}
+.cc-b{display:flex;flex-shrink:0;gap:12px}
+.cc-btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border:2px solid #fefefe;border-radius:999px;background:transparent;color:#fefefe;font-family:inherit;font-size:15px;font-weight:700;line-height:1;white-space:nowrap;cursor:pointer;touch-action:manipulation;transition:background-color .15s,color .15s,border-color .15s}
+.cc-btn:hover{background:#fefefe;color:#1b2e3c}
+.cc-btn.cc-yes{background:#6b0f1a;border-color:#6b0f1a}
+.cc-btn.cc-yes:hover{background:#500b14;border-color:#fefefe;color:#fefefe}
+#cc a:focus-visible,#cc button:focus-visible{outline:3px solid #fefefe;outline-offset:3px}
+#cc.cc-static{position:static;padding:0}
+@keyframes ccin{from{transform:translateY(24px);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.cc-in{animation:none}.cc-btn,.cc-open{transition:none}}
+@media (max-width:760px){
+.cc-in{flex-direction:column;align-items:stretch;gap:18px;padding:20px}
+.cc-b{flex-direction:column}
+.cc-btn{width:100%}
+}
+@media (max-width:600px){
+#cc{padding:8px}
+.cc-t{font-size:14px}
+.cc-t strong{font-size:16px}
+}
 </style>
 </head>
 <body>
@@ -315,9 +502,10 @@ main a[href^="tel:"],main a[href^="mailto:"]{display:inline-flex;align-items:cen
 </a>
 <input type="checkbox" id="mn" class="mn-chk" aria-label="Otvori ili zatvori meni"><label for="mn" class="mn-btn" aria-hidden="true"><svg class="b" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><svg class="x" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></label>
 <nav class="nav" aria-label="Glavna navigacija" style="display: flex; align-items: center; gap: 28px; font-size: 14px; font-weight: 500; flex-wrap: wrap">
-<div class="dd"><a class="lnk" href="index.html" style="padding: 12px 0"><span class="u">Početna</span><svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></a><div class="ddm"><div><a href="index.html#usluge">Delatnosti</a><a href="index.html#projekti">Odabrani projekti</a><a href="index.html#o-nama">O firmi</a><a href="index.html#kontakt">Kontakt</a></div></div></div>
+<div class="dd"><a class="lnk" href="index.html" style="padding: 12px 0"><span class="u">Početna</span><svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></a><div class="ddm"><div><a href="index.html#usluge">Delatnosti</a><a href="index.html#projekti">Odabrani projekti</a><a href="index.html#o-nama">O firmi</a></div></div></div>
 <a class="lnk" href="projekti.html" style="padding: 12px 0"><span class="u">Projekti</span></a>
 <a class="lnk" href="o-nama.html" style="padding: 12px 0"><span class="u">O nama</span></a>
+<a class="lnk" href="kontakt.html" style="padding: 12px 0"><span class="u">Kontakt</span></a>
 <a class="lnk ft-btn sm" href="kontakt.html">Zatražite ponudu <span class="ft-arr" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></span></a>
 </nav>
 </div>
@@ -340,7 +528,7 @@ main a[href^="tel:"],main a[href^="mailto:"]{display:inline-flex;align-items:cen
 <section class="sv">
 <div style="max-width: 1240px; margin: 0 auto; padding: 0 24px">
 <div class="g12 zz"><div class="zz-t"><h2>Niskogradnja sa <span translate="no">Trgoimpex W</span></h2><p>U niskogradnji radimo sve slojeve puta, od pripreme terena do završnog asfalta. Na donjem stroju ugrađujemo i valjamo tamponske slojeve od kamenog agregata, postavljamo ivičnjake i uređujemo odvodnjavanje, a na gornjem stroju ugrađujemo asfaltne slojeve finišerom i valjkom.</p></div><figure class="zz-m"><img class="zz-ph" src="images/radovi/valjak-na-tamponu-38.webp" alt="Valjak sabija tampon u zoru" width="1050" height="1400" loading="lazy"></figure></div>
-<div class="g12 zz rev"><div class="zz-t"><h2>Kako izgleda na terenu</h2><p>Radili smo saobraćajnice u naseljima, pristupne puteve industrijskih kompleksa, platoe ispod nadstrešnica i kolovoz na mostu. Za pešačke staze i platoe postavljamo behaton ploče. Radove izvodimo po projektnoj dokumentaciji naručioca i predajemo ih investitoru po završetku.</p></div><div class="zz-m deck-w"><div class="deck" role="region" aria-label="Snimci sa terena, 3 snimaka"><figure class="on"><div class="vp"><video src="video/valjak-na-putu.mp4" poster="images/radovi/valjak-na-putu-poster.webp" muted loop playsinline preload="none" width="540" height="960" aria-label="Valjak sabija novi asfalt"></video><button type="button" class="vp-btn" aria-label="Pusti snimak" onclick="var v=this.parentNode.querySelector('video');v.controls=true;v.play();this.hidden=true"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="#fefefe"></path></svg></button></div></figure><figure class="nx" inert><div class="vp"><video src="video/finiser-i-valjak.mp4" poster="images/radovi/finiser-i-valjak-poster.webp" muted loop playsinline preload="none" width="540" height="960" aria-label="Finišer i valjak rade zajedno"></video><button type="button" class="vp-btn" aria-label="Pusti snimak" onclick="var v=this.parentNode.querySelector('video');v.controls=true;v.play();this.hidden=true"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="#fefefe"></path></svg></button></div></figure><figure class="pv" inert><div class="vp"><video src="video/gotov-put.mp4" poster="images/radovi/gotov-put-poster.webp" muted loop playsinline preload="none" width="540" height="960" aria-label="Završen asfaltiran put"></video><button type="button" class="vp-btn" aria-label="Pusti snimak" onclick="var v=this.parentNode.querySelector('video');v.controls=true;v.play();this.hidden=true"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="#fefefe"></path></svg></button></div></figure></div><div class="deck-nav"><button type="button" class="deck-btn" aria-label="Prethodni snimak" onclick="var d=this.parentNode.parentNode.querySelector('.deck'),n=d.children.length,i=((+d.dataset.i||0)+-1+n)%n;d.dataset.i=i;[].forEach.call(d.children,function(c,k){var p=(k-i+n)%n;c.className=p==0?'on':p==1?'nx':p==n-1?'pv':'';c.inert=p!=0;var v=c.querySelector('video');if(v)v.pause()})"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button><span>Prelistajte snimke</span><button type="button" class="deck-btn" aria-label="Sledeći snimak" onclick="var d=this.parentNode.parentNode.querySelector('.deck'),n=d.children.length,i=((+d.dataset.i||0)+1+n)%n;d.dataset.i=i;[].forEach.call(d.children,function(c,k){var p=(k-i+n)%n;c.className=p==0?'on':p==1?'nx':p==n-1?'pv':'';c.inert=p!=0;var v=c.querySelector('video');if(v)v.pause()})"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button></div></div></div>
+<div class="g12 zz rev"><div class="zz-t"><h2>Kako izgleda na terenu</h2><p>Radili smo saobraćajnice u naseljima, pristupne puteve industrijskih kompleksa, platoe ispod nadstrešnica i kolovoz na mostu. Za pešačke staze i platoe postavljamo behaton ploče. Radove izvodimo po projektnoj dokumentaciji naručioca i predajemo ih investitoru po završetku.</p></div><div class="zz-m deck-w"><div class="deck" onpointerdown="this._x=event.clientX" onpointerup="var d=this,x=event.clientX-d._x;if(!(Math.abs(x)&gt;40))return;var h=function(e){e.stopPropagation();e.preventDefault()};d.addEventListener('click',h,true);setTimeout(function(){d.removeEventListener('click',h,true)},80);var n=d.children.length,i=((+d.dataset.i||0)+(x&lt;0?1:-1)+n)%n;d.dataset.i=i;var q=d.parentNode.querySelector('.dots');if(q)[].forEach.call(q.children,function(t,k){t.className=k==i?'on':'';t.setAttribute('aria-current',k==i)});[].forEach.call(d.children,function(c,k){var p=(k-i+n)%n;c.classList.remove('on','nx','pv');p==0?c.classList.add('on'):p==1?c.classList.add('nx'):p==n-1&amp;&amp;c.classList.add('pv');c.inert=p!=0;var v=c.querySelector('video');if(v)v.pause()})" role="region" aria-label="Snimci sa terena, 3 snimaka"><figure class="on"><div class="vp"><video src="video/valjak-na-putu.mp4" poster="images/radovi/valjak-na-putu-poster.webp" muted="" loop="" playsinline="" preload="none" width="540" height="960" aria-label="Valjak sabija novi asfalt" onclick="this.paused?this.play():this.pause()" onplay="this.parentNode.querySelector('.vp-btn').hidden=true;this.setAttribute('aria-pressed','true')" onpause="this.parentNode.querySelector('.vp-btn').hidden=false;this.setAttribute('aria-pressed','false')" role="button" aria-pressed="false" tabindex="0" onkeydown="if(event.key===' '||event.key==='Enter'){event.preventDefault();this.paused?this.play():this.pause()}" disablepictureinpicture=""></video><button type="button" class="vp-btn" aria-label="Pusti snimak" onclick="this.parentNode.querySelector('video').play()"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="#fefefe"></path></svg></button></div></figure><figure class="nx" inert=""><div class="vp"><video src="video/finiser-i-valjak.mp4" poster="images/radovi/finiser-i-valjak-poster.webp" muted="" loop="" playsinline="" preload="none" width="540" height="960" aria-label="Finišer i valjak rade zajedno" onclick="this.paused?this.play():this.pause()" onplay="this.parentNode.querySelector('.vp-btn').hidden=true;this.setAttribute('aria-pressed','true')" onpause="this.parentNode.querySelector('.vp-btn').hidden=false;this.setAttribute('aria-pressed','false')" role="button" aria-pressed="false" tabindex="0" onkeydown="if(event.key===' '||event.key==='Enter'){event.preventDefault();this.paused?this.play():this.pause()}" disablepictureinpicture=""></video><button type="button" class="vp-btn" aria-label="Pusti snimak" onclick="this.parentNode.querySelector('video').play()"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="#fefefe"></path></svg></button></div></figure><figure class="pv" inert=""><div class="vp"><video src="video/gotov-put.mp4" poster="images/radovi/gotov-put-poster.webp" muted="" loop="" playsinline="" preload="none" width="540" height="960" aria-label="Završen asfaltiran put" onclick="this.paused?this.play():this.pause()" onplay="this.parentNode.querySelector('.vp-btn').hidden=true;this.setAttribute('aria-pressed','true')" onpause="this.parentNode.querySelector('.vp-btn').hidden=false;this.setAttribute('aria-pressed','false')" role="button" aria-pressed="false" tabindex="0" onkeydown="if(event.key===' '||event.key==='Enter'){event.preventDefault();this.paused?this.play():this.pause()}" disablepictureinpicture=""></video><button type="button" class="vp-btn" aria-label="Pusti snimak" onclick="this.parentNode.querySelector('video').play()"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="#fefefe"></path></svg></button></div></figure></div><div class="deck-nav"><button type="button" class="deck-btn" aria-label="Prethodni snimak" onclick="var d=this.parentNode.parentNode.querySelector('.deck'),n=d.children.length,i=((+d.dataset.i||0)+-1+n)%n;d.dataset.i=i;[].forEach.call(d.children,function(c,k){var p=(k-i+n)%n;c.className=p==0?'on':p==1?'nx':p==n-1?'pv':'';c.inert=p!=0;var v=c.querySelector('video');if(v)v.pause()})"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button><span class="dh-d">Prelistajte snimke</span><span class="dh-m dots" role="group" aria-label="Izbor snimka"><button type="button" data-k="0" class="on" aria-current="true" aria-label="Snimak 1 od 3" onclick="var d=this.closest('.deck-w,section').querySelector('.deck,.hm-clips'),n=d.children.length,i=+this.dataset.k;d.dataset.i=i;[].forEach.call(d.children,function(c,k){var p=(k-i+n)%n;c.classList.remove('on','nx','pv');p==0?c.classList.add('on'):p==1?c.classList.add('nx'):p==n-1&amp;&amp;c.classList.add('pv');c.inert=d.classList.contains('deck')&amp;&amp;p!=0;var v=c.querySelector('video');if(v)v.pause()});[].forEach.call(this.parentNode.children,function(t,k){t.className=k==i?'on':'';t.setAttribute('aria-current',k==i)})"></button><button type="button" data-k="1" aria-current="false" aria-label="Snimak 2 od 3" onclick="var d=this.closest('.deck-w,section').querySelector('.deck,.hm-clips'),n=d.children.length,i=+this.dataset.k;d.dataset.i=i;[].forEach.call(d.children,function(c,k){var p=(k-i+n)%n;c.classList.remove('on','nx','pv');p==0?c.classList.add('on'):p==1?c.classList.add('nx'):p==n-1&amp;&amp;c.classList.add('pv');c.inert=d.classList.contains('deck')&amp;&amp;p!=0;var v=c.querySelector('video');if(v)v.pause()});[].forEach.call(this.parentNode.children,function(t,k){t.className=k==i?'on':'';t.setAttribute('aria-current',k==i)})"></button><button type="button" data-k="2" aria-current="false" aria-label="Snimak 3 od 3" onclick="var d=this.closest('.deck-w,section').querySelector('.deck,.hm-clips'),n=d.children.length,i=+this.dataset.k;d.dataset.i=i;[].forEach.call(d.children,function(c,k){var p=(k-i+n)%n;c.classList.remove('on','nx','pv');p==0?c.classList.add('on'):p==1?c.classList.add('nx'):p==n-1&amp;&amp;c.classList.add('pv');c.inert=d.classList.contains('deck')&amp;&amp;p!=0;var v=c.querySelector('video');if(v)v.pause()});[].forEach.call(this.parentNode.children,function(t,k){t.className=k==i?'on':'';t.setAttribute('aria-current',k==i)})"></button></span><button type="button" class="deck-btn" aria-label="Sledeći snimak" onclick="var d=this.parentNode.parentNode.querySelector('.deck'),n=d.children.length,i=((+d.dataset.i||0)+1+n)%n;d.dataset.i=i;[].forEach.call(d.children,function(c,k){var p=(k-i+n)%n;c.className=p==0?'on':p==1?'nx':p==n-1?'pv':'';c.inert=p!=0;var v=c.querySelector('video');if(v)v.pause()})"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button></div></div></div>
 <div class="g12 zz"><div class="zz-t"><h2>Šta obuhvata</h2><p>Sve što je potrebno za ovu vrstu radova radimo sami, od pripreme do primopredaje.</p><ul class="sv-scope"><li><span class="ab-ck" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fefefe" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg></span>Priprema terena</li><li><span class="ab-ck" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fefefe" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg></span>Tamponski slojevi i valjanje</li><li><span class="ab-ck" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fefefe" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg></span>Ivičnjaci i bankine</li><li><span class="ab-ck" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fefefe" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg></span>Odvodnjavanje</li><li><span class="ab-ck" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fefefe" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg></span>Asfaltni slojevi</li><li><span class="ab-ck" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fefefe" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg></span>Behaton staze i platoi</li></ul></div><figure class="zz-m"><img class="zz-ph" src="images/radovi/asfaltiranje-ulice-6.webp" alt="Asfaltirana raskrsnica u naselju" width="1400" height="1050" loading="lazy"></figure></div>
 </div>
 </section>
@@ -376,7 +564,7 @@ main a[href^="tel:"],main a[href^="mailto:"]{display:inline-flex;align-items:cen
 <div class="ft-cta">
 <h2>Planirate radove?</h2>
 <p>Recite nam gde i šta planirate. Odgovaramo na upite u roku od 24&nbsp;sata radnim danom.</p>
-<a class="lnk ft-btn" href="kontakt.html">Zatražite ponudu <span class="ft-arr" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M8 7h9v9"></path></svg></span></a>
+<a class="lnk ft-btn" href="kontakt.html">Zatražite ponudu <span class="ft-arr" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></span></a>
 </div>
 <p class="ft-word" aria-hidden="true" translate="no">TRGOIMPEX</p>
 <div class="ft-card">
@@ -387,16 +575,19 @@ main a[href^="tel:"],main a[href^="mailto:"]{display:inline-flex;align-items:cen
 <p class="ft-id">PIB:&nbsp;101876008<br>MB:&nbsp;08762767</p>
 <div class="ft-qr"><img src="images/qr-recenzije.png" alt="QR kod koji vodi na recenzije o firmi Trgoimpex W" width="132" height="132" loading="lazy"><p>Skenirajte kod i ostavite recenziju o nama</p></div>
 </div>
-<div>
-<h3>Delatnosti</h3>
+<div class="ft-col">
+<input type="checkbox" class="ft-chk" id="fc1" aria-label="Delatnosti" role="button" aria-expanded="false" onchange="this.setAttribute('aria-expanded',this.checked)" onkeydown="if(event.key==='Enter'){this.click()}">
+<h3><label for="fc1" class="ft-acc">Delatnosti<svg class="ft-chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></label></h3>
 <ul class="ft-list"><li><a class="lnk" href="ogradjivanje.html">Ograđivanje</a></li><li><a class="lnk" href="asfaltiranje.html">Asfaltiranje</a></li><li><a class="lnk" href="iskopi.html">Iskopi i zemljani radovi</a></li><li><a class="lnk" href="niskogradnja.html">Niskogradnja</a></li><li><a class="lnk" href="visokogradnja.html">Visokogradnja</a></li></ul>
 </div>
-<div>
-<h3>Stranice</h3>
+<div class="ft-col">
+<input type="checkbox" class="ft-chk" id="fc2" aria-label="Stranice" role="button" aria-expanded="false" onchange="this.setAttribute('aria-expanded',this.checked)" onkeydown="if(event.key==='Enter'){this.click()}">
+<h3><label for="fc2" class="ft-acc">Stranice<svg class="ft-chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></label></h3>
 <ul class="ft-list"><li><a class="lnk" href="index.html">Početna</a></li><li><a class="lnk" href="projekti.html">Projekti</a></li><li><a class="lnk" href="o-nama.html">O nama</a></li><li><a class="lnk" href="kontakt.html">Kontakt</a></li></ul>
 </div>
-<div>
-<h3>Kontakt</h3>
+<div class="ft-col">
+<input type="checkbox" class="ft-chk" id="fc3" aria-label="Kontakt" role="button" aria-expanded="false" onchange="this.setAttribute('aria-expanded',this.checked)" onkeydown="if(event.key==='Enter'){this.click()}">
+<h3><label for="fc3" class="ft-acc">Kontakt<svg class="ft-chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></label></h3>
 <ul class="ft-contact">
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6b0f1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg><span>Titelska&nbsp;5<br>21000 Novi&nbsp;Sad, Srbija</span></li>
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6b0f1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"></path></svg><a class="lnk" href="tel:+38163504857">+381&nbsp;63&nbsp;504&nbsp;857</a></li>
@@ -407,11 +598,18 @@ main a[href^="tel:"],main a[href^="mailto:"]{display:inline-flex;align-items:cen
 </div>
 <div class="ft-bar">
 <span>© 2026 <span translate="no">Trgoimpex&nbsp;W</span>. Sva prava zadržana.</span>
-<span class="ft-bar-links"><a class="lnk" href="#">Politika privatnosti</a><a class="lnk" href="#sadrzaj">Nazad na vrh ↑</a></span>
+<span class="ft-bar-links"><a class="lnk" href="privatnost.html">Politika privatnosti</a><a class="lnk" href="#sadrzaj">Nazad na vrh ↑</a></span>
 </div>
 </div>
 </footer>
 
+<div id="cc" role="region" aria-label="Obaveštenje o kolačićima" hidden>
+<div class="cc-in">
+<p class="cc-t"><strong>Vaša privatnost</strong>Koristimo analitičke kolačiće (Google Analytics) da bismo videli kako se sajt koristi. Uključuju se tek uz vaš pristanak. Više u <a href="privatnost.html">Politici privatnosti</a>.</p>
+<div class="cc-b"><button type="button" class="cc-btn cc-no" data-cc="denied">Odbij analitičke</button><button type="button" class="cc-btn cc-yes" data-cc="accepted">Prihvati sve</button></div>
 </div>
+</div>
+</div>
+<script src="cookie-consent.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cze45.github.io/trgoimpex-w-sajt-v2/sitemap.xml
