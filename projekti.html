@@ -355,6 +355,44 @@ dl.g4 dt{font-size:14px!important;line-height:1.4}
 
 /* računar: prvi projekat bliže naslovnoj sekciji */
 @media (min-width:601px){.pl .card.g12:first-child{padding-top:40px!important}}
+/* NAVBAR PROVIDAN PREKO SLIKE */
+.hd{background-color:#fefefe;color:#1b2e3c;border-bottom:1px solid #d8dde2}
+.hd .lm{fill:currentColor}
+.hd .lw{fill:#6b0f1a}
+.hd .act{color:#6b0f1a}
+.hd .nav a:not(.btn):hover{color:inherit;border-bottom-color:currentColor}
+.hd .nav a.btn:hover{background:#500b14}
+.hd a:not(.btn):focus-visible{outline-color:currentColor}
+@supports (animation-timeline:scroll()){
+.hd,.hd .lw,.hd .act{animation-timing-function:linear;animation-fill-mode:both;animation-timeline:scroll(nearest block);animation-range:0 160px}
+.hd{background-color:rgba(254,254,254,0);color:#fefefe;border-bottom-color:transparent;animation-name:hdbg}
+.hd .lw{fill:#fefefe;animation-name:hdw}
+.hd .act{color:#fefefe;animation-name:hdact}
+}
+@keyframes hdbg{from{background-color:rgba(254,254,254,0);color:#fefefe;border-bottom-color:transparent}to{background-color:#fefefe;color:#1b2e3c;border-bottom-color:#d8dde2}}
+@keyframes hdw{from{fill:#fefefe}to{fill:#6b0f1a}}
+@keyframes hdact{from{color:#fefefe}to{color:#6b0f1a}}
+.nav a.ft-btn,.nav a.ft-btn:hover,.hd .nav a.ft-btn:hover{color:#fefefe!important;border-bottom:0}
+@media (max-width:900px){
+.hd{margin-bottom:-65px!important}
+header:has(.mn-chk:checked){background:#fefefe!important;color:#1b2e3c!important;animation:none!important;border-bottom-color:#d8dde2!important}
+header:has(.mn-chk:checked) .lw{fill:#6b0f1a!important;animation:none!important}
+}
+.hd .nav a:hover .u::after,.hd .nav a:focus-visible .u::after,.hd .nav a[aria-current="page"] .u::after{background-color:#6b0f1a}
+@supports (animation-timeline:scroll()){
+.hd .nav a:hover .u::after,.hd .nav a:focus-visible .u::after,.hd .nav a[aria-current="page"] .u::after{background-color:#fefefe;animation:hdul linear both;animation-timeline:scroll(nearest block);animation-range:0 160px}
+}
+@keyframes hdul{from{background-color:#fefefe}to{background-color:#6b0f1a}}
+header:has(.mn-chk:checked) .nav a:hover .u::after,header:has(.mn-chk:checked) .nav a:focus-visible .u::after,header:has(.mn-chk:checked) .nav a[aria-current="page"] .u::after{animation:none;background-color:#6b0f1a}
+
+:root{--hh:85px}
+@media (max-width:900px){:root{--hh:65px}header:has(.mn-chk:checked) .act{color:#6b0f1a!important;animation:none!important}}
+body main>section.pth.dark:first-child{padding-top:calc(112px + var(--hh))!important;min-height:calc(300px + var(--hh))!important}
+body main>section.svh.dark:first-child{padding-top:calc(112px + var(--hh))!important;min-height:calc(580px + var(--hh))!important}
+@media (max-width:600px){
+body main>section.pth.dark:first-child{padding-top:calc(clamp(56px,16vw,80px) + var(--hh))!important;min-height:calc(290px + var(--hh))!important}
+body main>section.svh.dark:first-child{padding-top:calc(72px + var(--hh))!important;min-height:calc(590px + var(--hh))!important}
+}
 </style>
 <noscript><style>img[data-src]{display:none}</style></noscript>
 </head>
@@ -367,19 +405,19 @@ dl.g4 dt{font-size:14px!important;line-height:1.4}
 
 
 <!-- HEADER -->
-<header style="position: sticky; top: 0; z-index: 50; background: #fefefe; border-bottom: 1px solid #d8dde2">
+<header class="hd" style="position: sticky; top: 0; z-index: 50; margin-bottom: -85px">
 <div style="max-width: 1288px; margin: 0 auto; padding: 0 24px; min-height: 84px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap">
 <a href="index.html" aria-label="Trgoimpex W – početna strana" style="display: inline-flex; align-items: center; gap: 11px">
-<svg viewBox="0 0 198 112" width="64" height="41" fill="none" aria-hidden="true"><path d="M17 11H137L116 34H74V88L47 106V34H0L17 11Z" fill="#1B2E3C"></path><path d="M80 41H108L126 69L147 38L169 70L187 41H216L176 112H157L146 92L132 112H113L80 54Z" transform="translate(-18 -2)" fill="#6B0F1A"></path></svg>
+<svg viewBox="0 0 198 112" width="64" height="41" fill="none" aria-hidden="true"><path d="M17 11H137L116 34H74V88L47 106V34H0L17 11Z" class="lm"></path><path d="M80 41H108L126 69L147 38L169 70L187 41H216L176 112H157L146 92L132 112H113L80 54Z" transform="translate(-18 -2)" class="lw"></path></svg>
 <span translate="no" style="font-weight: 800; font-size: 19px; line-height: 1; letter-spacing: -0.065em; white-space: nowrap">TRGOIMPEX&nbsp;W</span>
 </a>
 <input type="checkbox" id="mn" class="mn-chk" aria-label="Otvori ili zatvori meni"><label for="mn" class="mn-btn" aria-hidden="true"><svg class="b" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><svg class="x" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></label>
 <nav class="nav" aria-label="Glavna navigacija" style="display: flex; align-items: center; gap: 28px; font-size: 14px; font-weight: 500; flex-wrap: wrap">
 <div class="dd"><a class="lnk" href="index.html" style="padding: 12px 0"><span class="u">Početna</span><svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></a><div class="ddm"><div><a href="index.html#usluge">Delatnosti</a><a href="index.html#projekti">Odabrani projekti</a><a href="index.html#o-nama">O firmi</a></div></div></div>
-<a class="lnk" href="projekti.html" aria-current="page" style="padding: 12px 0; color: #6b0f1a"><span class="u">Projekti</span></a>
+<a class="lnk act" href="projekti.html" aria-current="page" style="padding: 12px 0"><span class="u">Projekti</span></a>
 <a class="lnk" href="o-nama.html" style="padding: 12px 0"><span class="u">O nama</span></a>
 <a class="lnk" href="kontakt.html" style="padding: 12px 0"><span class="u">Kontakt</span></a>
-<a class="lnk ft-btn sm" href="kontakt.html">Zatražite ponudu <span class="ft-arr" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></span></a>
+<a class="lnk ft-btn sm" href="kontakt.html" style="min-height: 40px; height: 40px"><span>Zatražite ponudu</span> <span class="ft-arr" aria-hidden="true" style="width: 28px; height: 28px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></span></a>
 </nav>
 </div>
 </header>
