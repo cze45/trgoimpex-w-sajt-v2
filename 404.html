@@ -483,7 +483,7 @@ dl.g4 dt{font-size:14px!important;line-height:1.4}
 /* slike (data-src) i posteri videa (data-poster): učitaj tek kad su blizu ekrana; scrollMargin pokriva horizontalne galerije.
    Chromeov loading="lazy" na telefonu kreće ~1250 px unapred i otima mrežu glavnoj slici. */
 (function(){var v=document.querySelectorAll('img[data-src],video[data-poster]');
-function s(e){if(e.tagName==='IMG'){e.src=e.getAttribute('data-src');e.removeAttribute('data-src')}else{e.poster=e.getAttribute('data-poster');e.removeAttribute('data-poster')}}
+function s(e){if(e.tagName==='IMG'){if(e.dataset.srcset){e.srcset=e.dataset.srcset;e.removeAttribute('data-srcset')}e.src=e.getAttribute('data-src');e.removeAttribute('data-src')}else{e.poster=e.getAttribute('data-poster');e.removeAttribute('data-poster')}}
 if(!('IntersectionObserver' in window)){v.forEach(s);return}
 var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){s(e.target);o.unobserve(e.target)}})},{rootMargin:'200px',scrollMargin:'200px'});
 v.forEach(function(e){o.observe(e)})})();

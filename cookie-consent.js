@@ -9,6 +9,7 @@
   function write(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
 
   function loadGA() {
+    if (GA_ID.indexOf('XXXX') !== -1) return; // privremeni ID: ne učitavaj Google tag dok se ne upiše pravi
     window['ga-disable-' + GA_ID] = false;
     if (window.__gaLoaded) return;
     window.__gaLoaded = true;
