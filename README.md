@@ -22,7 +22,7 @@ Prva verzija sajta (pre novih slika, snimaka i strana delatnosti) je u privatnom
 
 ## Otvoreno pre objave na pravom domenu
 
-- Anketa na strani Kontakt šalje preko `mailto:` (`anketa.js`); treba je povezati sa Formspree ili Cloudflare Workerom.
+- Anketa na strani Kontakt šalje preko Formspree-a: u `anketa.js` upisati `ENDPOINT` (npr. `https://formspree.io/f/abcdwxyz`). Dok je prazan, ostaje `mailto:` rezerva. U Politiku privatnosti dodati Formspree kao obrađivača podataka.
 - U `cookie-consent.js` zameniti `GA_ID` (`G-XXXXXXXXXX`) pravim Measurement ID-jem.
 - Linkove ka Instagramu i Facebooku dodati kad klijent pošalje naloge (trenutno ih nema na sajtu).
 - Tekstove opisa delatnosti, brojke i podatke u politici privatnosti proveriti sa klijentom.
