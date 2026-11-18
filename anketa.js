@@ -124,10 +124,30 @@
       done.focus();
     }
 
+    // Dugme: točkić se vrti dok traje slanje, pa se krug zatvori i pojavi se štiklirano (CSS .an-spin na strani Kontakt).
+    var label = btn.firstChild.textContent, arr = btn.querySelector('.ft-arr'), arrHtml = arr.innerHTML;
+    function busy() {
+      sending = true;
+      btn.disabled = true; btn.firstChild.textContent = 'Šaljem… ';
+      arr.innerHTML = '<svg class="an-spin" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" pathLength="100"></circle><path class="an-ck" d="M8 12.5l2.8 2.8L16.5 9.5" pathLength="100"></path></svg>';
+    }
+    function restore() {
+      sending = false;
+      btn.disabled = false; btn.classList.remove('ok'); btn.firstChild.textContent = label; arr.innerHTML = arrHtml;
+    }
+    function success(okLabel, title, text, then) {
+      btn.classList.add('ok'); btn.firstChild.textContent = okLabel + ' ';
+      setTimeout(function () { restore(); showDone(title, text); if (then) then(); }, 1100);
+    }
+
     if (!ENDPOINT) {
-      showDone('Hvala, ' + name + '. Upit je pripremljen.',
-        'Otvorili smo vaš program za e-poštu sa pripremljenom porukom. Pošaljite je da upit stigne do nas. Ako se ništa nije otvorilo, pozovite nas na ' + PHONE + '.');
-      if (to) location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+      // Ništa se ne šalje na server, pa točkić traje kratko; posle štikliranog otvara se program za e-poštu.
+      busy();
+      setTimeout(function () {
+        success('Pripremljeno', 'Hvala, ' + name + '. Upit je pripremljen.',
+          'Otvorili smo vaš program za e-poštu sa pripremljenom porukom. Pošaljite je da upit stigne do nas. Ako se ništa nije otvorilo, pozovite nas na ' + PHONE + '.',
+          function () { if (to) location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n')); });
+      }, 600);
       return;
     }
 
@@ -146,23 +166,12 @@
       return;
     }
 
-    // Dugme: točkić se vrti dok traje slanje, pa se krug zatvori i pojavi se štiklirano (CSS .an-spin na strani Kontakt).
-    var label = btn.firstChild.textContent, arr = btn.querySelector('.ft-arr'), arrHtml = arr.innerHTML;
-    sending = true;
-    btn.disabled = true; btn.firstChild.textContent = 'Šaljem… ';
-    arr.innerHTML = '<svg class="an-spin" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" pathLength="100"></circle><path class="an-ck" d="M8 12.5l2.8 2.8L16.5 9.5" pathLength="100"></path></svg>';
-    function restore() {
-      sending = false;
-      btn.disabled = false; btn.classList.remove('ok'); btn.firstChild.textContent = label; arr.innerHTML = arrHtml;
-    }
-    function success(text) {
-      btn.classList.add('ok'); btn.firstChild.textContent = 'Poslato ';
-      setTimeout(function () { restore(); showDone('Hvala, ' + name + '. Upit je poslat.', text); }, 1100);
-    }
+    busy();
+    function sent(text) { success('Poslato', 'Hvala, ' + name + '. Upit je poslat.', text); }
 
     // Zamke za botove (skriveno polje ili prebrzo popunjavanje): tiho se pravi da je poslato, ništa ne ide na server.
     var trap = f.querySelector('input[name=_gotcha]');
-    if ((trap && trap.value) || Date.now() - openedAt < MIN_FILL) { setTimeout(function () { success('Javićemo vam se na broj ' + phone + '.'); }, 700); return; }
+    if ((trap && trap.value) || Date.now() - openedAt < MIN_FILL) { setTimeout(function () { sent('Javićemo vam se na broj ' + phone + '.'); }, 700); return; }
 
     function fail(tooMany) {
       restore();
@@ -182,7 +191,7 @@
       clearTimeout(timer);
       if (!r.ok) return fail(r.status === 429);
       markSent();
-      success('Javićemo vam se na broj ' + phone + '. Ako je hitno, pozovite nas na ' + PHONE + '.');
+      sent('Javićemo vam se na broj ' + phone + '. Ako je hitno, pozovite nas na ' + PHONE + '.');
     }).catch(function () { clearTimeout(timer); fail(); });
   });
 })();
